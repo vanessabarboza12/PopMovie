@@ -2,7 +2,6 @@
 CREATE DATABASE IF NOT EXISTS bd_popmovie;
 USE bd_popmovie;
 
-SELECT * FROM tb_filme;
 CREATE TABLE IF NOT EXISTS tb_filme(
     id int PRIMARY KEY AUTO_INCREMENT,
     nome varchar(40),
