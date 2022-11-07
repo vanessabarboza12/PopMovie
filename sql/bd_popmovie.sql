@@ -4,8 +4,8 @@ USE bd_popmovie;
 CREATE TABLE IF NOT EXISTS tb_usuario(
     id int PRIMARY KEY AUTO_INCREMENT,
     nome varchar(40) NOT NULL,
-    data_cadastro date,
-    data_nascimento date,
+    data_cadastro date NOT NULL,
+    data_nascimento date NOT NULL,
     email varchar(60) NOT NULL,
     senha varchar(30) NOT NULL
 );
