@@ -1,6 +1,6 @@
 ﻿namespace PopMovie
 {
-    partial class Form2
+    partial class FormCadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -34,10 +34,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
+            this.txbSenha = new System.Windows.Forms.TextBox();
+            this.txbConfirmaSenha = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateNascimento = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -53,7 +55,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 80);
+            this.label2.Location = new System.Drawing.Point(16, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 1;
@@ -62,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 113);
+            this.label3.Location = new System.Drawing.Point(16, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 2;
@@ -71,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 147);
+            this.label4.Location = new System.Drawing.Point(16, 179);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 3;
@@ -80,7 +82,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 177);
+            this.label5.Location = new System.Drawing.Point(16, 209);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 13);
             this.label5.TabIndex = 4;
@@ -89,59 +91,80 @@
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCadastrar.Location = new System.Drawing.Point(19, 214);
+            this.btnCadastrar.Location = new System.Drawing.Point(19, 233);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(249, 49);
             this.btnCadastrar.TabIndex = 5;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // textBox1
+            // txbNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(60, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 6;
+            this.txbNome.Location = new System.Drawing.Point(60, 68);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(208, 20);
+            this.txbNome.TabIndex = 6;
             // 
-            // textBox2
+            // txbEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(60, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 20);
-            this.textBox2.TabIndex = 7;
+            this.txbEmail.Location = new System.Drawing.Point(60, 138);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(208, 20);
+            this.txbEmail.TabIndex = 7;
             // 
-            // textBox3
+            // txbSenha
             // 
-            this.textBox3.Location = new System.Drawing.Point(60, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(169, 20);
-            this.textBox3.TabIndex = 8;
+            this.txbSenha.Location = new System.Drawing.Point(60, 172);
+            this.txbSenha.Name = "txbSenha";
+            this.txbSenha.Size = new System.Drawing.Size(208, 20);
+            this.txbSenha.TabIndex = 8;
             // 
-            // textBox4
+            // txbConfirmaSenha
             // 
-            this.textBox4.Location = new System.Drawing.Point(138, 170);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(91, 20);
-            this.textBox4.TabIndex = 9;
+            this.txbConfirmaSenha.Location = new System.Drawing.Point(138, 202);
+            this.txbConfirmaSenha.Name = "txbConfirmaSenha";
+            this.txbConfirmaSenha.Size = new System.Drawing.Size(130, 20);
+            this.txbConfirmaSenha.TabIndex = 9;
             // 
-            // Form2
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 106);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Data de nascimento:";
+            // 
+            // dateNascimento
+            // 
+            this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateNascimento.Location = new System.Drawing.Point(128, 106);
+            this.dateNascimento.Name = "dateNascimento";
+            this.dateNascimento.Size = new System.Drawing.Size(140, 20);
+            this.dateNascimento.TabIndex = 11;
+            this.dateNascimento.Value = new System.DateTime(2022, 11, 6, 15, 0, 7, 0);
+            // 
+            // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(291, 278);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(291, 294);
+            this.Controls.Add(this.dateNascimento);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txbConfirmaSenha);
+            this.Controls.Add(this.txbSenha);
+            this.Controls.Add(this.txbEmail);
+            this.Controls.Add(this.txbNome);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "FormCadastro";
+            this.Text = "Cadastro";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,9 +178,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.TextBox txbEmail;
+        private System.Windows.Forms.TextBox txbSenha;
+        private System.Windows.Forms.TextBox txbConfirmaSenha;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateNascimento;
     }
 }

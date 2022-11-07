@@ -1,6 +1,6 @@
 ﻿namespace PopMovie
 {
-    partial class Form3
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.txbSenha = new System.Windows.Forms.TextBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,14 +55,13 @@
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "E-mail:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // txbEmail
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 20);
-            this.textBox2.TabIndex = 8;
+            this.txbEmail.Location = new System.Drawing.Point(136, 65);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(187, 20);
+            this.txbEmail.TabIndex = 8;
             // 
             // label4
             // 
@@ -74,37 +73,38 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Senha:";
             // 
-            // textBox3
+            // txbSenha
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(187, 20);
-            this.textBox3.TabIndex = 10;
+            this.txbSenha.Location = new System.Drawing.Point(136, 117);
+            this.txbSenha.Name = "txbSenha";
+            this.txbSenha.Size = new System.Drawing.Size(187, 20);
+            this.txbSenha.TabIndex = 10;
             // 
-            // btnCadastrar
+            // btnLogin
             // 
-            this.btnCadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCadastrar.Location = new System.Drawing.Point(74, 156);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(249, 49);
-            this.btnCadastrar.TabIndex = 11;
-            this.btnCadastrar.Text = "Entrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnLogin.Location = new System.Drawing.Point(74, 156);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(249, 49);
+            this.btnLogin.TabIndex = 11;
+            this.btnLogin.Text = "Entrar";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // Form3
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(381, 217);
-            this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "Form3";
-            this.Text = "Form3";
+            this.Name = "FormLogin";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,9 +114,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.TextBox txbSenha;
+        private System.Windows.Forms.Button btnLogin;
     }
 }

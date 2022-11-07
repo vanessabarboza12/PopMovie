@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,17 @@ using System.Windows.Forms;
 
 namespace PopMovie
 {
-    public partial class Form2 : Form
+    public partial class FormLogin : Form
     {
-        public Form2()
+        private BancoDeDados banco;
+        public FormLogin(BancoDeDados banco)
         {
             InitializeComponent();
+            this.banco = banco;
+            txbSenha.PasswordChar = '*';
         }
+
+ 
+       
     }
 }
