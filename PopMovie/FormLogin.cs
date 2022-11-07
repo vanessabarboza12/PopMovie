@@ -20,8 +20,10 @@ namespace PopMovie
             this.banco = banco;
             txbSenha.PasswordChar = '*';
         }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
 
- 
-       
+
+        }
     }
 }
