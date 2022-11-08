@@ -7,7 +7,9 @@ CREATE TABLE IF NOT EXISTS tb_usuario(
     data_cadastro date NOT NULL,
     data_nascimento date NOT NULL,
     email varchar(60) NOT NULL,
-    senha varchar(30) NOT NULL
+    senha varchar(30) NOT NULL,
+    total_filmes int NOT NULL,
+    total_minutos int NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS tb_filme(
@@ -32,4 +34,3 @@ IGNORE 2 lines ## Pular duas primeiras linhas da planilha
 (nome, ano_lancamento, classificacao, duracao_min, genero, nota_imdb, sinopse, diretor);
 
 ## BASE DE DADOS INICIAL: https://www.kaggle.com/datasets/ramjasmaurya/top-250s-in-imdb  -> Caso acharmos melhores, podemos substituir
-
