@@ -69,9 +69,12 @@ namespace PopMovie
                 return;
             }
 
+            int totalFilmes = 0;
+            int totalMinutos = 0;
+
             try
             {
-                Usuario usuario = new Usuario(nome, email, dataCadastro, dataNascimento, senha);
+                Usuario usuario = new Usuario(nome, dataCadastro, dataNascimento, email, senha, totalFilmes, totalMinutos);
                 banco.cadastroUsuario(usuario);
 
                 //informa o usuário que o usuario foi cadastrado no banco
