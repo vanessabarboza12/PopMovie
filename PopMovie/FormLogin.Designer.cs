@@ -34,6 +34,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txbSenha = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -91,12 +92,23 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnVoltar.Location = new System.Drawing.Point(74, 220);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(249, 49);
+            this.btnVoltar.TabIndex = 12;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(381, 217);
+            this.ClientSize = new System.Drawing.Size(384, 281);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbSenha);
             this.Controls.Add(this.label4);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

@@ -40,6 +40,7 @@
             this.txbConfirmaSenha = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateNascimento = new System.Windows.Forms.DateTimePicker();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -145,12 +146,23 @@
             this.dateNascimento.TabIndex = 11;
             this.dateNascimento.Value = new System.DateTime(2022, 11, 6, 15, 0, 7, 0);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnVoltar.Location = new System.Drawing.Point(19, 288);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(249, 49);
+            this.btnVoltar.TabIndex = 12;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(291, 294);
+            this.ClientSize = new System.Drawing.Size(292, 356);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.dateNascimento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txbConfirmaSenha);
@@ -184,5 +196,6 @@
         private System.Windows.Forms.TextBox txbConfirmaSenha;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateNascimento;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

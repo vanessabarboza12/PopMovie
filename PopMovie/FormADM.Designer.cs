@@ -43,21 +43,24 @@
             // 
             // adcFilme_btn
             // 
+            this.adcFilme_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             resources.ApplyResources(this.adcFilme_btn, "adcFilme_btn");
             this.adcFilme_btn.Name = "adcFilme_btn";
-            this.adcFilme_btn.UseVisualStyleBackColor = true;
+            this.adcFilme_btn.UseVisualStyleBackColor = false;
             // 
             // removeFilm_btn
             // 
+            this.removeFilm_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             resources.ApplyResources(this.removeFilm_btn, "removeFilm_btn");
             this.removeFilm_btn.Name = "removeFilm_btn";
-            this.removeFilm_btn.UseVisualStyleBackColor = true;
+            this.removeFilm_btn.UseVisualStyleBackColor = false;
             // 
             // gerencia_btn
             // 
+            this.gerencia_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             resources.ApplyResources(this.gerencia_btn, "gerencia_btn");
             this.gerencia_btn.Name = "gerencia_btn";
-            this.gerencia_btn.UseVisualStyleBackColor = true;
+            this.gerencia_btn.UseVisualStyleBackColor = false;
             // 
             // TelaAdm
             // 
