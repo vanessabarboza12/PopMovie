@@ -38,11 +38,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkFiltros = new System.Windows.Forms.CheckBox();
             this.filtro1 = new System.Windows.Forms.Label();
             this.selectFiltro1 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.selectFiltro2 = new System.Windows.Forms.ComboBox();
+            this.checkBox_sim = new System.Windows.Forms.CheckBox();
+            this.checkBox_nao = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -141,16 +142,6 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Adicionar filtros?";
             // 
-            // checkFiltros
-            // 
-            this.checkFiltros.AutoSize = true;
-            this.checkFiltros.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkFiltros.Location = new System.Drawing.Point(234, 154);
-            this.checkFiltros.Name = "checkFiltros";
-            this.checkFiltros.Size = new System.Drawing.Size(15, 14);
-            this.checkFiltros.TabIndex = 10;
-            this.checkFiltros.UseVisualStyleBackColor = true;
-            // 
             // filtro1
             // 
             this.filtro1.AutoSize = true;
@@ -187,17 +178,40 @@
             this.selectFiltro2.Size = new System.Drawing.Size(156, 21);
             this.selectFiltro2.TabIndex = 14;
             // 
+            // checkBox_sim
+            // 
+            this.checkBox_sim.AutoSize = true;
+            this.checkBox_sim.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_sim.Location = new System.Drawing.Point(234, 144);
+            this.checkBox_sim.Name = "checkBox_sim";
+            this.checkBox_sim.Size = new System.Drawing.Size(79, 35);
+            this.checkBox_sim.TabIndex = 15;
+            this.checkBox_sim.Text = "Sim";
+            this.checkBox_sim.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_nao
+            // 
+            this.checkBox_nao.AutoSize = true;
+            this.checkBox_nao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_nao.Location = new System.Drawing.Point(326, 145);
+            this.checkBox_nao.Name = "checkBox_nao";
+            this.checkBox_nao.Size = new System.Drawing.Size(83, 35);
+            this.checkBox_nao.TabIndex = 16;
+            this.checkBox_nao.Text = "Não";
+            this.checkBox_nao.UseVisualStyleBackColor = true;
+            // 
             // TelaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(632, 409);
+            this.Controls.Add(this.checkBox_nao);
+            this.Controls.Add(this.checkBox_sim);
             this.Controls.Add(this.selectFiltro2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.selectFiltro1);
             this.Controls.Add(this.filtro1);
-            this.Controls.Add(this.checkFiltros);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
@@ -227,10 +241,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkFiltros;
         private System.Windows.Forms.Label filtro1;
         private System.Windows.Forms.ComboBox selectFiltro1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox selectFiltro2;
+        private System.Windows.Forms.CheckBox checkBox_sim;
+        private System.Windows.Forms.CheckBox checkBox_nao;
     }
 }
