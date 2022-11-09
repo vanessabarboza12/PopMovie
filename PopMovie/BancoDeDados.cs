@@ -34,8 +34,8 @@ namespace PopMovie
                 cmdInsert.Connection = connectionBD;
 
                 //seta o comando sql que será executado
-                cmdInsert.CommandText = "INSERT INTO tb_usuario (nome, data_cadastro, data_nascimento, email, senha)" +
-                                    "VALUES ( @nome, @dataCadastro, @dataNascimento, @email, @senha)";
+                cmdInsert.CommandText = "INSERT INTO tb_usuario (nome, data_cadastro, data_nascimento, email, senha, total_filmes, total_minutos)" +
+                                    "VALUES ( @nome, @dataCadastro, @dataNascimento, @email, @senha, @total_filmes, @total_minutos)";
 
                 //seta os parametros que deverão ser passados para a consulta sql
                 cmdInsert.Parameters.AddWithValue("nome", usuario.getNome());
