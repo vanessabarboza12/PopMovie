@@ -47,6 +47,7 @@
             resources.ApplyResources(this.adcFilme_btn, "adcFilme_btn");
             this.adcFilme_btn.Name = "adcFilme_btn";
             this.adcFilme_btn.UseVisualStyleBackColor = false;
+            this.adcFilme_btn.Click += new System.EventHandler(this.adcFilme_btn_Click);
             // 
             // removeFilm_btn
             // 

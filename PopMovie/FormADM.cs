@@ -21,5 +21,10 @@ namespace PopMovie
         {
 
         }
+
+        private void adcFilme_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
