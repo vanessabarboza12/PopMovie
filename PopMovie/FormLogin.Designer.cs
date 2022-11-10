@@ -40,53 +40,56 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(324, 31);
+            this.label1.Size = new System.Drawing.Size(575, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Faça Login na sua Conta:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 63);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(188, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 20);
+            this.label3.Size = new System.Drawing.Size(127, 39);
             this.label3.TabIndex = 3;
             this.label3.Text = "E-mail:";
             // 
             // txbEmail
             // 
-            this.txbEmail.Location = new System.Drawing.Point(136, 65);
+            this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbEmail.Location = new System.Drawing.Point(343, 113);
             this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(187, 20);
+            this.txbEmail.Size = new System.Drawing.Size(244, 45);
             this.txbEmail.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 117);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(188, 200);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 20);
+            this.label4.Size = new System.Drawing.Size(120, 38);
             this.label4.TabIndex = 9;
             this.label4.Text = "Senha:";
             // 
             // txbSenha
             // 
-            this.txbSenha.Location = new System.Drawing.Point(136, 117);
+            this.txbSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSenha.Location = new System.Drawing.Point(343, 193);
             this.txbSenha.Name = "txbSenha";
-            this.txbSenha.Size = new System.Drawing.Size(187, 20);
+            this.txbSenha.Size = new System.Drawing.Size(244, 45);
             this.txbSenha.TabIndex = 10;
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnLogin.Location = new System.Drawing.Point(74, 156);
+            this.btnLogin.Location = new System.Drawing.Point(282, 276);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(249, 49);
+            this.btnLogin.Size = new System.Drawing.Size(305, 73);
             this.btnLogin.TabIndex = 11;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -95,9 +98,9 @@
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnVoltar.Location = new System.Drawing.Point(74, 220);
+            this.btnVoltar.Location = new System.Drawing.Point(282, 361);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(249, 49);
+            this.btnVoltar.Size = new System.Drawing.Size(305, 73);
             this.btnVoltar.TabIndex = 12;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -107,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(384, 281);
+            this.ClientSize = new System.Drawing.Size(804, 446);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbSenha);
