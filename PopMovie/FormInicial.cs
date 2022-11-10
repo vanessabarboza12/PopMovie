@@ -27,12 +27,23 @@ namespace PopMovie
         {
             FormLogin janelaLogin = new FormLogin(banco);
             janelaLogin.ShowDialog();
+            
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             FormCadastro janelaCadastro = new FormCadastro(banco);
             janelaCadastro.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
