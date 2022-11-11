@@ -13,8 +13,8 @@ namespace PopMovie
 {
     public partial class FormLogin : Form
     {
-        private BancoDeDados banco;
-        public FormLogin(BancoDeDados banco)
+        private Conexao banco;
+        public FormLogin(Conexao banco)
         {
             InitializeComponent();
             this.banco = banco;
@@ -68,7 +68,12 @@ namespace PopMovie
 
         private void label1_Click(object sender, EventArgs e)
         {
-            z
+            
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

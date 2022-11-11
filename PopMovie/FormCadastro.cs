@@ -13,8 +13,8 @@ namespace PopMovie
 {
     public partial class FormCadastro : Form
     {
-        private BancoDeDados banco;
-        public FormCadastro(BancoDeDados banco)
+        private Conexao banco;
+        public FormCadastro(Conexao banco)
         {
             InitializeComponent();
             this.banco = banco;
@@ -43,9 +43,13 @@ namespace PopMovie
             }
 
             string email = txbEmail.Text.Trim();
-            if (email == "")
+            try
             {
-                MessageBox.Show("Preencha o campo \"Email\"");
+                System.Net.Mail.MailAddress validacaoEmail = new System.Net.Mail.MailAddress(email);
+            }
+            catch
+            {
+                MessageBox.Show("Valor para o campo \"Email\" é inválido");
                 return;
             }
 
@@ -74,8 +78,8 @@ namespace PopMovie
 
             try
             {
-                Usuario usuario = new Usuario(nome, dataCadastro, dataNascimento, email, senha, totalFilmes, totalMinutos);
-                banco.cadastroUsuario(usuario);
+                Telespectador telespectador = new Telespectador(nome, dataCadastro, dataNascimento, email, senha, totalFilmes, totalMinutos);
+                banco.cadastroUsuario(telespectador);
 
                 //informa o usuário que o usuario foi cadastrado no banco
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -103,14 +107,9 @@ namespace PopMovie
             }
         }
 
-        private void FormCadastro_Load(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
     }
 }

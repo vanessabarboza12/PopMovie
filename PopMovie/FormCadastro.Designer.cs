@@ -72,7 +72,6 @@
             this.label3.Size = new System.Drawing.Size(98, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "E-mail:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -156,7 +155,7 @@
             this.dateNascimento.Name = "dateNascimento";
             this.dateNascimento.Size = new System.Drawing.Size(265, 29);
             this.dateNascimento.TabIndex = 11;
-            this.dateNascimento.Value = new System.DateTime(2022, 11, 6, 15, 0, 7, 0);
+            this.dateNascimento.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             // 
             // btnVoltar
             // 
@@ -168,6 +167,7 @@
             this.btnVoltar.TabIndex = 12;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // FormCadastro
             // 
@@ -190,7 +190,6 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCadastro";
             this.Text = "Cadastro";
-            this.Load += new System.EventHandler(this.FormCadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

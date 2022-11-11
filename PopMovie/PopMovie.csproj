@@ -48,18 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BancoDeDados.cs" />
-    <Compile Include="TelaUsuario.cs">
+    <Compile Include="Conexao.cs" />
+    <Compile Include="FormTelespectador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaUsuario.Designer.cs">
-      <DependentUpon>TelaUsuario.cs</DependentUpon>
+    <Compile Include="FormTelespectador.Designer.cs">
+      <DependentUpon>FormTelespectador.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormADM.cs">
+    <Compile Include="FormAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormADM.Designer.cs">
-      <DependentUpon>FormADM.cs</DependentUpon>
+    <Compile Include="FormAdministrador.Designer.cs">
+      <DependentUpon>FormAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicial.cs">
       <SubType>Form</SubType>
@@ -81,9 +81,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="FormADM.resx">
-      <DependentUpon>FormADM.cs</DependentUpon>
+    <Compile Include="Administrador.cs" />
+    <Compile Include="Telespectador.cs" />
+    <EmbeddedResource Include="FormAdministrador.resx">
+      <DependentUpon>FormAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicial.resx">
       <DependentUpon>FormInicial.cs</DependentUpon>
@@ -103,8 +104,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TelaUsuario.resx">
-      <DependentUpon>TelaUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="FormTelespectador.resx">
+      <DependentUpon>FormTelespectador.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

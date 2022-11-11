@@ -12,7 +12,7 @@ namespace PopMovie
 {
     public partial class FormInicial : Form
     {
-        private BancoDeDados banco;
+        private Conexao banco;
         public FormInicial()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace PopMovie
 
         private void FormInicial_Load(object sender, EventArgs e)
         {
-            banco = new BancoDeDados();
+            banco = new Conexao();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
