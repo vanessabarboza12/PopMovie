@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Security.Cryptography;
 
 namespace PopMovie
 {
@@ -15,7 +16,23 @@ namespace PopMovie
 
         public Conexao()
         {
-            dadosConexao = @"server=127.0.0.1;uid=root;pwd=;database=bd_popmovie;ConnectionTimeout=1";
+            dadosConexao = @"server=sql10.freesqldatabase.com;uid=sql10562225;pwd=8MUWRVvP9u;database=sql10562225;ConnectionTimeout=1";
+            //banco local -> dadosConexao = @"server=127.0.0.1;uid=root;pwd= {vazio ou ifspifsp talvez};database=bd_popmovie;ConnectionTimeout=1";
+        }
+
+
+        //método para criptografia de senha
+        public static string SHA256Hash(string content)
+        {
+            SHA256 sh = new SHA256CryptoServiceProvider();
+            sh.ComputeHash(UTF8Encoding.UTF8.GetBytes(content));
+            byte[] result = sh.Hash;
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < result.Length; i++)
+            {
+                sb.Append(result[i].ToString("x2"));
+            }
+            return sb.ToString();
         }
 
         public void cadastroUsuario(Telespectador telespectador)
@@ -80,6 +97,10 @@ namespace PopMovie
                     {
                         FormAdministrador telaAdministrador = new FormAdministrador();
                         telaAdministrador.Show();
+                    }
+                    else
+                    {
+
                     }
                 }
                 connectionBD.Close();
