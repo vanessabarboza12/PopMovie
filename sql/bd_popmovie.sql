@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS tb_telespectador(
     data_cadastro date NOT NULL,
     data_nascimento date NOT NULL,
     email varchar(60) NOT NULL,
-    senha varchar(30) NOT NULL,
+    senha varchar(65) NOT NULL,
     total_filmes int NOT NULL,
     total_minutos int NOT NULL
 );
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS tb_administrador(
     id int PRIMARY KEY AUTO_INCREMENT,
     nome varchar(40) NOT NULL,
     email varchar(60) NOT NULL,
-    senha varchar(30) NOT NULL
+    senha varchar(65) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS tb_filme(

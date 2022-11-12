@@ -27,7 +27,6 @@ namespace PopMovie
         {
             FormLogin janelaLogin = new FormLogin(banco);
             janelaLogin.ShowDialog();
-            
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

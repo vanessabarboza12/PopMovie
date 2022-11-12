@@ -54,9 +54,9 @@ namespace PopMovie
             }
 
             string senha = txbSenha.Text.Trim();
-            if (senha == "")
+            if (senha == "" || senha.Length < 8)
             {
-                MessageBox.Show("Preencha o campo \"senha\"");
+                MessageBox.Show("Preencha o campo \"senha\" com no mínimo 8 caracteres");
                 return;
             }
 
@@ -71,6 +71,10 @@ namespace PopMovie
             {
                 MessageBox.Show("Confirmação de senha não confere! Digite novamente");
                 return;
+            }
+            else
+            {
+                senha = Conexao.SHA256Hash(senha);
             }
 
             int totalFilmes = 0;

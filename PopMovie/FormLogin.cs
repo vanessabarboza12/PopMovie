@@ -23,17 +23,25 @@ namespace PopMovie
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string email = txbEmail.Text.Trim();
-            if (email == "")
+            try
             {
-                MessageBox.Show("Preencha o campo \"Email\"");
+                System.Net.Mail.MailAddress validacaoEmail = new System.Net.Mail.MailAddress(email);
+            }
+            catch
+            {
+                MessageBox.Show("Valor para o campo \"Email\" é inválido");
                 return;
             }
 
             string senha = txbSenha.Text.Trim();
-            if (senha == "")
+            if (senha == "" || senha.Length < 8)
             {
-                MessageBox.Show("Preencha o campo \"Senha\"");
+                MessageBox.Show("Preencha o campo \"senha\" com no mínimo 8 caracteres");
                 return;
+            }
+            else
+            {
+                senha = Conexao.SHA256Hash(senha);
             }
 
             try
@@ -63,12 +71,6 @@ namespace PopMovie
                 sb.AppendLine(erro.StackTrace);
                 MessageBox.Show(sb.ToString(), "ERRO Desconhecido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
