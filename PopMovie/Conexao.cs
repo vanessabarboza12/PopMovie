@@ -16,7 +16,7 @@ namespace PopMovie
 
         public Conexao()
         {
-            dadosConexao = @"server=sql10.freesqldatabase.com;uid=sql10562225;pwd=8MUWRVvP9u;database=sql10562225;ConnectionTimeout=1";
+            dadosConexao = @"server=sql10.freesqldatabase.com;uid=sql10562225;pwd=;database=sql10562225;ConnectionTimeout=1";
             //banco local -> dadosConexao = @"server=127.0.0.1;uid=root;pwd= {vazio ou ifspifsp talvez};database=bd_popmovie;ConnectionTimeout=1";
         }
 
