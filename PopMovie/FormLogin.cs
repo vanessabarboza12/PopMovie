@@ -41,15 +41,23 @@ namespace PopMovie
             }
             else
             {
-                senha = Conexao.SHA256Hash(senha);
+                senha = banco.criptografarSenha(senha);
             }
 
             try
             {
-                banco.loginUsuario(email, senha);
+                bool login = banco.loginUsuario(email, senha);
                 //informa o usuário que o usuario foi cadastrado no banco
-                MessageBox.Show("Login realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
+                if (login == true)
+                { 
+                    MessageBox.Show("Login realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Login não realizado com sucesso. Senha ou email incorreto!");
+                }
+
             }
             catch (MySqlException erro)
             {
@@ -72,7 +80,6 @@ namespace PopMovie
                 MessageBox.Show(sb.ToString(), "ERRO Desconhecido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();

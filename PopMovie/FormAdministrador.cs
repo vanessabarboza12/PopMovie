@@ -12,9 +12,12 @@ namespace PopMovie
 {
     public partial class FormAdministrador : Form
     {
-        public FormAdministrador()
+        private Administrador administrador;
+        public FormAdministrador(Administrador a)
         {
+            this.administrador = a;
             InitializeComponent();
+            lblAdministrador.Text = "Olá, administrador(a) " + administrador.getNome();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,6 +26,11 @@ namespace PopMovie
         }
 
         private void adcFilme_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormAdministrador_Load(object sender, EventArgs e)
         {
 
         }

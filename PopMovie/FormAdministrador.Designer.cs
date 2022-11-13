@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdministrador));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAdministrador = new System.Windows.Forms.Label();
             this.adcFilme_btn = new System.Windows.Forms.Button();
             this.removeFilm_btn = new System.Windows.Forms.Button();
             this.gerencia_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblAdministrador
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            resources.ApplyResources(this.lblAdministrador, "lblAdministrador");
+            this.lblAdministrador.Name = "lblAdministrador";
+            this.lblAdministrador.Click += new System.EventHandler(this.label1_Click);
             // 
             // adcFilme_btn
             // 
@@ -71,8 +71,9 @@
             this.Controls.Add(this.gerencia_btn);
             this.Controls.Add(this.removeFilm_btn);
             this.Controls.Add(this.adcFilme_btn);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblAdministrador);
             this.Name = "FormAdministrador";
+            this.Load += new System.EventHandler(this.FormAdministrador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -80,7 +81,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAdministrador;
         private System.Windows.Forms.Button adcFilme_btn;
         private System.Windows.Forms.Button removeFilm_btn;
         private System.Windows.Forms.Button gerencia_btn;

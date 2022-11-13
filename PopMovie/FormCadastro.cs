@@ -74,7 +74,7 @@ namespace PopMovie
             }
             else
             {
-                senha = Conexao.SHA256Hash(senha);
+                senha = banco.criptografarSenha(senha);
             }
 
             int totalFilmes = 0;
@@ -83,11 +83,18 @@ namespace PopMovie
             try
             {
                 Telespectador telespectador = new Telespectador(nome, dataCadastro, dataNascimento, email, senha, totalFilmes, totalMinutos);
-                banco.cadastroUsuario(telespectador);
+                bool cadastro = banco.cadastroUsuario(telespectador);
 
-                //informa o usuário que o usuario foi cadastrado no banco
-                MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
+                if (cadastro == true)
+                {
+                    //informa o usuário que o usuario foi cadastrado no banco
+                    MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Cadastro não realizado. Email já em uso!");
+                }
             }
             catch (MySqlException erro)
             {
@@ -114,6 +121,11 @@ namespace PopMovie
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormCadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
