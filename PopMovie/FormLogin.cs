@@ -34,9 +34,9 @@ namespace PopMovie
             }
 
             string senha = txbSenha.Text.Trim();
-            if (senha == "" || senha.Length < 8)
+            if (senha == "" || senha.Length < 4)
             {
-                MessageBox.Show("Preencha o campo \"senha\" com no mínimo 8 caracteres");
+                MessageBox.Show("Preencha o campo \"senha\" com no mínimo 4 caracteres");
                 return;
             }
             else
