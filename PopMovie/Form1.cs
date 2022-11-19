@@ -26,5 +26,10 @@ namespace PopMovie
         {
 
         }
+
+        private void AdicionarFilme_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
