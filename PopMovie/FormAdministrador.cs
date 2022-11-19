@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,14 @@ namespace PopMovie
 {
     public partial class FormAdministrador : Form
     {
-        private Administrador administrador;
-        public FormAdministrador(Administrador a)
+        private MySqlConnection conexaoBanco;
+        private Administrador admin;
+        public FormAdministrador(MySqlConnection conexao, Administrador admin)
         {
-            this.administrador = a;
+            this.admin = admin;
+            this.conexaoBanco = conexao;
             InitializeComponent();
-            lblAdministrador.Text = "Olá, administrador(a) " + administrador.getNome();
+            lblAdministrador.Text = "Olá, administrador(a) " + admin.getNome();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -27,12 +30,19 @@ namespace PopMovie
 
         private void adcFilme_btn_Click(object sender, EventArgs e)
         {
-
+            FormAdmAddFilme janelaAddFilme = new FormAdmAddFilme(conexaoBanco, admin);
+            janelaAddFilme.ShowDialog();
         }
 
         private void FormAdministrador_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Application.OpenForms[0].WindowState = FormWindowState.Normal; // Primeira tela (inicial), deixa de estar minimizada e volta ao normal
         }
     }
 }

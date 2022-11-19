@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace PopMovie
 {
@@ -17,7 +18,7 @@ namespace PopMovie
 
         public Conexao()
         {
-            dadosConexao = @"server=sql10.freesqldatabase.com;uid=sql10562225;pwd=;database=sql10562225;ConnectionTimeout=1";////banco local -> dadosConexao = @"server=127.0.0.1;uid=root;pwd= {vazio ou ifspifsp talvez};database=bd_popmovie;ConnectionTimeout=1";
+            dadosConexao = @"server=sql10.freesqldatabase.com;uid=sql10578872;pwd=GLlFwGdMDj;database=sql10578872;ConnectionTimeout=1";////banco local -> dadosConexao = @"server=127.0.0.1;uid=root;pwd= {vazio ou ifspifsp talvez};database=bd_popmovie;ConnectionTimeout=1";
             conexaoBanco = new MySqlConnection(dadosConexao);
         }
 
@@ -64,15 +65,14 @@ namespace PopMovie
             }
         }
 
-        public bool cadastroUsuario(Telespectador telespectador)
+        public void cadastroUsuario(Telespectador telespectador)
         {
             try
             {
                 conexaoBanco.Open(); // abertura de conexão com o banco
-
                 if (emailJaCadastrado(telespectador.getEmail(), conexaoBanco) == true)
                 {
-                    return false;
+                    MessageBox.Show("Cadastro não realizado. Email já em uso!");
                 }
                 else
                 {
@@ -91,9 +91,9 @@ namespace PopMovie
                     cmdCadastro.Parameters.AddWithValue("total_filmes", telespectador.getTotalFilmes());
                     cmdCadastro.Parameters.AddWithValue("total_minutos", telespectador.getTotalMinutos());
                     cmdCadastro.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
-    
                     cmdCadastro.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
-                    return true;
+
+                    MessageBox.Show("Cadastro realizado com sucesso!");
                 }
             }
             finally
@@ -102,7 +102,7 @@ namespace PopMovie
             }
         }
 
-        public Boolean loginUsuario(string email, string senha)
+        public void loginUsuario(string email, string senha)
         {
             try
             {
@@ -116,10 +116,13 @@ namespace PopMovie
 
                 if (leitor.Read())
                 {
-                        Telespectador telespectador = new Telespectador(leitor.GetString(1), leitor.GetDateTime(2), leitor.GetDateTime(3), leitor.GetString(4), leitor.GetString(5), leitor.GetInt32(6), leitor.GetInt32(7));
-                        FormTelespectador telaUsuario = new FormTelespectador(telespectador);
-                        telaUsuario.Show();
-                        return true;
+                    Telespectador telespectador = new Telespectador(leitor.GetString(1), leitor.GetDateTime(2), leitor.GetDateTime(3), leitor.GetString(4), leitor.GetString(5), leitor.GetInt32(6), leitor.GetInt32(7));
+                    FormTelespectador telaTelespectador = new FormTelespectador(telespectador);
+                    Application.OpenForms[1].Close();
+                    MessageBox.Show("Login realizado com sucesso!");
+                    telaTelespectador.Show();
+                    Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
+                    Application.OpenForms[1].Close(); // Fecha a tela de login após abrir tela de telespectador
                 }
                 else
                 {   
@@ -130,14 +133,17 @@ namespace PopMovie
 
                     if (leitor.Read())
                     {
+                      
                         Administrador administrador = new Administrador(leitor.GetString(1), leitor.GetString(2), leitor.GetString(3));
-                        FormAdministrador telaAdministrador = new FormAdministrador(administrador);
+                        FormAdministrador telaAdministrador = new FormAdministrador(conexaoBanco, administrador);
+                        MessageBox.Show("Login realizado com sucesso!");
                         telaAdministrador.Show();
-                        return true;
+                        Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
+                        Application.OpenForms[1].Close(); // Fecha a tela de login após abrir tela de admin
                     }
                     else
                     {
-                        return false;
+                        MessageBox.Show("Login não realizado com sucesso. Senha ou email incorreto!");
                     }
                 }
             }

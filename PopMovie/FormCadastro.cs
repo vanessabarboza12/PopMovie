@@ -83,18 +83,8 @@ namespace PopMovie
             try
             {
                 Telespectador telespectador = new Telespectador(nome, dataCadastro, dataNascimento, email, senha, totalFilmes, totalMinutos);
-                bool cadastro = banco.cadastroUsuario(telespectador);
+                banco.cadastroUsuario(telespectador);
 
-                if (cadastro == true)
-                {
-                    //informa o usuário que o usuario foi cadastrado no banco
-                    MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Cadastro não realizado. Email já em uso!");
-                }
             }
             catch (MySqlException erro)
             {

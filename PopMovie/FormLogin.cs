@@ -46,18 +46,7 @@ namespace PopMovie
 
             try
             {
-                bool login = banco.loginUsuario(email, senha);
-                //informa o usuário que o usuario foi cadastrado no banco
-                if (login == true)
-                { 
-                    MessageBox.Show("Login realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Login não realizado com sucesso. Senha ou email incorreto!");
-                }
-
+                banco.loginUsuario(email, senha);
             }
             catch (MySqlException erro)
             {
@@ -83,6 +72,16 @@ namespace PopMovie
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

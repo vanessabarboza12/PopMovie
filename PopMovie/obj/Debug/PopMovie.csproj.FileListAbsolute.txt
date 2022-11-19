@@ -28,3 +28,6 @@ C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\obj\Debug\PopMovie.exe.con
 C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\obj\Debug\PopMovie.csproj.CopyComplete
 C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\obj\Debug\PopMovie.FormTelespectador.resources
 C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\obj\Debug\PopMovie.FormAdministrador.resources
+C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\obj\Debug\PopMovie.RemoverFilme.resources
+C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\obj\Debug\PopMovie.GerenciarConta.resources
+C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\obj\Debug\PopMovie.FormAdmAddFilme.resources

@@ -71,6 +71,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
             this.label2.Location = new System.Drawing.Point(15, 337);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(360, 33);
@@ -81,6 +82,7 @@
             // 
             this.lblMinutosAssistidos.AutoSize = true;
             this.lblMinutosAssistidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinutosAssistidos.ForeColor = System.Drawing.SystemColors.Window;
             this.lblMinutosAssistidos.Location = new System.Drawing.Point(15, 387);
             this.lblMinutosAssistidos.Name = "lblMinutosAssistidos";
             this.lblMinutosAssistidos.Size = new System.Drawing.Size(377, 33);
@@ -103,6 +105,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(16, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(461, 33);
@@ -113,6 +116,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(15, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(255, 37);
@@ -123,6 +127,7 @@
             // 
             this.filtro1.AutoSize = true;
             this.filtro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filtro1.ForeColor = System.Drawing.SystemColors.Window;
             this.filtro1.Location = new System.Drawing.Point(16, 209);
             this.filtro1.Name = "filtro1";
             this.filtro1.Size = new System.Drawing.Size(190, 31);
@@ -142,6 +147,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Window;
             this.label6.Location = new System.Drawing.Point(16, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(198, 31);
@@ -161,6 +167,7 @@
             // 
             this.checkBox_sim.AutoSize = true;
             this.checkBox_sim.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_sim.ForeColor = System.Drawing.SystemColors.Window;
             this.checkBox_sim.Location = new System.Drawing.Point(345, 163);
             this.checkBox_sim.Name = "checkBox_sim";
             this.checkBox_sim.Size = new System.Drawing.Size(79, 35);
@@ -172,6 +179,7 @@
             // 
             this.checkBox_nao.AutoSize = true;
             this.checkBox_nao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_nao.ForeColor = System.Drawing.SystemColors.Window;
             this.checkBox_nao.Location = new System.Drawing.Point(506, 163);
             this.checkBox_nao.Name = "checkBox_nao";
             this.checkBox_nao.Size = new System.Drawing.Size(83, 35);
@@ -189,11 +197,13 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Sair da conta";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Window;
             this.lblUsuario.Location = new System.Drawing.Point(15, 23);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(393, 39);
@@ -226,7 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(804, 446);
             this.Controls.Add(this.lblTotalFilmes);
             this.Controls.Add(this.lblTotalMinutos);
@@ -245,6 +255,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buscar_btn);
             this.Controls.Add(this.busca_usuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormTelespectador";
             this.Text = "Tela Telespectador";
             this.Load += new System.EventHandler(this.FormTelespectador_Load);
