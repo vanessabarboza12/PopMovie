@@ -40,9 +40,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(38, 36);
+=======
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(12, 25);
+>>>>>>> 47bf2039348e8455e8d86977fb6b75f7f9937354
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(714, 51);
             this.label1.TabIndex = 0;
@@ -53,8 +59,13 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
             this.label3.Location = new System.Drawing.Point(150, 139);
+=======
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(168, 123);
+>>>>>>> 47bf2039348e8455e8d86977fb6b75f7f9937354
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 33);
             this.label3.TabIndex = 3;
@@ -72,8 +83,13 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
             this.label4.Location = new System.Drawing.Point(148, 204);
+=======
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(166, 188);
+>>>>>>> 47bf2039348e8455e8d86977fb6b75f7f9937354
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 33);
             this.label4.TabIndex = 9;
@@ -89,9 +105,14 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnLogin.Location = new System.Drawing.Point(267, 284);
+=======
+            this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btnLogin.Location = new System.Drawing.Point(267, 280);
+>>>>>>> 47bf2039348e8455e8d86977fb6b75f7f9937354
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(320, 55);
             this.btnLogin.TabIndex = 11;
@@ -101,8 +122,9 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.btnVoltar.Location = new System.Drawing.Point(267, 356);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(320, 55);

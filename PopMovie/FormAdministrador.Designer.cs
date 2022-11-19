@@ -39,29 +39,32 @@
             // lblAdministrador
             // 
             resources.ApplyResources(this.lblAdministrador, "lblAdministrador");
-            this.lblAdministrador.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblAdministrador.ForeColor = System.Drawing.Color.Red;
             this.lblAdministrador.Name = "lblAdministrador";
             this.lblAdministrador.Click += new System.EventHandler(this.label1_Click);
             // 
             // adcFilme_btn
             // 
-            this.adcFilme_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.adcFilme_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             resources.ApplyResources(this.adcFilme_btn, "adcFilme_btn");
+            this.adcFilme_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.adcFilme_btn.Name = "adcFilme_btn";
             this.adcFilme_btn.UseVisualStyleBackColor = false;
             this.adcFilme_btn.Click += new System.EventHandler(this.adcFilme_btn_Click);
             // 
             // removeFilm_btn
             // 
-            this.removeFilm_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.removeFilm_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             resources.ApplyResources(this.removeFilm_btn, "removeFilm_btn");
+            this.removeFilm_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.removeFilm_btn.Name = "removeFilm_btn";
             this.removeFilm_btn.UseVisualStyleBackColor = false;
             // 
             // gerencia_btn
             // 
-            this.gerencia_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.gerencia_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             resources.ApplyResources(this.gerencia_btn, "gerencia_btn");
+            this.gerencia_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.gerencia_btn.Name = "gerencia_btn";
             this.gerencia_btn.UseVisualStyleBackColor = false;
             // 
@@ -78,7 +81,6 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.gerencia_btn);
             this.Controls.Add(this.removeFilm_btn);
             this.Controls.Add(this.adcFilme_btn);
