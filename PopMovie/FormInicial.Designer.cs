@@ -39,11 +39,13 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(224, 332);
+            this.btnEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Swis721 Blk BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btnEntrar.Location = new System.Drawing.Point(306, 416);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(372, 65);
+            this.btnEntrar.Size = new System.Drawing.Size(334, 48);
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
@@ -51,11 +53,13 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(224, 238);
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Swis721 Blk BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btnCadastrar.Location = new System.Drawing.Point(306, 338);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(372, 67);
+            this.btnCadastrar.Size = new System.Drawing.Size(334, 52);
             this.btnCadastrar.TabIndex = 4;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -63,20 +67,22 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(239, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(306, 118);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(482, 140);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(63, 39);
+            this.pictureBox2.Location = new System.Drawing.Point(134, 102);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(155, 156);
+            this.pictureBox2.Size = new System.Drawing.Size(145, 156);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
@@ -84,12 +90,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(804, 446);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.ClientSize = new System.Drawing.Size(927, 551);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnEntrar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormInicial";
             this.Text = "Tela inicial";
             this.Load += new System.EventHandler(this.FormInicial_Load);
