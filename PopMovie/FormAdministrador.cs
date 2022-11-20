@@ -23,20 +23,11 @@ namespace PopMovie
             lblAdministrador.Text = "Olá, administrador(a) " + admin.getNome();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void adcFilme_btn_Click(object sender, EventArgs e)
         {
             FormAdmAddFilme janelaAddFilme = new FormAdmAddFilme(conexaoBanco, admin);
             janelaAddFilme.ShowDialog();
-        }
-
-        private void FormAdministrador_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)

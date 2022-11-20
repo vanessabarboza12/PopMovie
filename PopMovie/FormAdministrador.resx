@@ -166,7 +166,7 @@
     <value>1</value>
   </data>
   <data name="adcFilme_btn.Text" xml:space="preserve">
-    <value>Adcionar Filme</value>
+    <value>Adicionar Filme</value>
   </data>
   <data name="&gt;&gt;adcFilme_btn.Name" xml:space="preserve">
     <value>adcFilme_btn</value>

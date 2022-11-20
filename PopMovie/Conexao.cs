@@ -92,8 +92,8 @@ namespace PopMovie
                     cmdCadastro.Parameters.AddWithValue("total_minutos", telespectador.getTotalMinutos());
                     cmdCadastro.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
                     cmdCadastro.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
-
                     MessageBox.Show("Cadastro realizado com sucesso!");
+                    Application.OpenForms[1].Close(); // Fecha tela de cadastro e retorna para tela inicial
                 }
             }
             finally
@@ -120,9 +120,9 @@ namespace PopMovie
                     FormTelespectador telaTelespectador = new FormTelespectador(telespectador);
                     Application.OpenForms[1].Close();
                     MessageBox.Show("Login realizado com sucesso!");
-                    telaTelespectador.Show();
-                    Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
                     Application.OpenForms[1].Close(); // Fecha a tela de login após abrir tela de telespectador
+                    Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
+                    telaTelespectador.Show();
                 }
                 else
                 {   
@@ -137,9 +137,9 @@ namespace PopMovie
                         Administrador administrador = new Administrador(leitor.GetString(1), leitor.GetString(2), leitor.GetString(3));
                         FormAdministrador telaAdministrador = new FormAdministrador(conexaoBanco, administrador);
                         MessageBox.Show("Login realizado com sucesso!");
-                        telaAdministrador.Show();
-                        Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
                         Application.OpenForms[1].Close(); // Fecha a tela de login após abrir tela de admin
+                        Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
+                        telaAdministrador.Show();
                     }
                     else
                     {
@@ -154,4 +154,4 @@ namespace PopMovie
             }
         }
     }
- }
+}

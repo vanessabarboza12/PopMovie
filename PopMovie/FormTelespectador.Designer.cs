@@ -41,7 +41,7 @@
             this.selectFiltro2 = new System.Windows.Forms.ComboBox();
             this.checkBox_sim = new System.Windows.Forms.CheckBox();
             this.checkBox_nao = new System.Windows.Forms.CheckBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSairConta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblTotalMinutos = new System.Windows.Forms.Label();
             this.lblTotalFilmes = new System.Windows.Forms.Label();
@@ -57,21 +57,21 @@
             // 
             // buscar_btn
             // 
-            this.buscar_btn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.buscar_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.buscar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buscar_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.buscar_btn.Location = new System.Drawing.Point(614, 104);
             this.buscar_btn.Name = "buscar_btn";
             this.buscar_btn.Size = new System.Drawing.Size(161, 49);
             this.buscar_btn.TabIndex = 2;
             this.buscar_btn.Text = "Buscar";
             this.buscar_btn.UseVisualStyleBackColor = false;
-            this.buscar_btn.Click += new System.EventHandler(this.buscar_btn_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(15, 337);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(360, 33);
@@ -82,7 +82,7 @@
             // 
             this.lblMinutosAssistidos.AutoSize = true;
             this.lblMinutosAssistidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinutosAssistidos.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblMinutosAssistidos.ForeColor = System.Drawing.Color.Red;
             this.lblMinutosAssistidos.Location = new System.Drawing.Point(15, 387);
             this.lblMinutosAssistidos.Name = "lblMinutosAssistidos";
             this.lblMinutosAssistidos.Size = new System.Drawing.Size(377, 33);
@@ -91,8 +91,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.button1.Location = new System.Drawing.Point(622, 209);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 121);
@@ -105,7 +106,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(16, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(461, 33);
@@ -116,7 +117,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(15, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(255, 37);
@@ -127,7 +128,7 @@
             // 
             this.filtro1.AutoSize = true;
             this.filtro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filtro1.ForeColor = System.Drawing.SystemColors.Window;
+            this.filtro1.ForeColor = System.Drawing.Color.Red;
             this.filtro1.Location = new System.Drawing.Point(16, 209);
             this.filtro1.Name = "filtro1";
             this.filtro1.Size = new System.Drawing.Size(190, 31);
@@ -147,7 +148,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
+            this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(16, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(198, 31);
@@ -187,23 +188,24 @@
             this.checkBox_nao.Text = "Não";
             this.checkBox_nao.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSairConta
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(627, 349);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 75);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Sair da conta";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSairConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
+            this.btnSairConta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSairConta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btnSairConta.Location = new System.Drawing.Point(627, 349);
+            this.btnSairConta.Name = "btnSairConta";
+            this.btnSairConta.Size = new System.Drawing.Size(148, 75);
+            this.btnSairConta.TabIndex = 17;
+            this.btnSairConta.Text = "Sair da conta";
+            this.btnSairConta.UseVisualStyleBackColor = false;
+            this.btnSairConta.Click += new System.EventHandler(this.btnSairConta_Click);
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblUsuario.ForeColor = System.Drawing.Color.Red;
             this.lblUsuario.Location = new System.Drawing.Point(15, 23);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(393, 39);
@@ -241,7 +243,7 @@
             this.Controls.Add(this.lblTotalFilmes);
             this.Controls.Add(this.lblTotalMinutos);
             this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSairConta);
             this.Controls.Add(this.checkBox_nao);
             this.Controls.Add(this.checkBox_sim);
             this.Controls.Add(this.selectFiltro2);
@@ -255,10 +257,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buscar_btn);
             this.Controls.Add(this.busca_usuario);
+            this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormTelespectador";
             this.Text = "Tela Telespectador";
-            this.Load += new System.EventHandler(this.FormTelespectador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,7 +280,7 @@
         private System.Windows.Forms.ComboBox selectFiltro2;
         private System.Windows.Forms.CheckBox checkBox_sim;
         private System.Windows.Forms.CheckBox checkBox_nao;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSairConta;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblTotalMinutos;
         private System.Windows.Forms.Label lblTotalFilmes;

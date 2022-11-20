@@ -56,17 +56,17 @@
     <Compile Include="FormAdmAddFilme.Designer.cs">
       <DependentUpon>FormAdmAddFilme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormAdmRemoverFilme.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormAdmRemoverFilme.Designer.cs">
+      <DependentUpon>FormAdmRemoverFilme.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="FormAdmRemoverUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="FormAdmRemoverUsuario.Designer.cs">
+      <DependentUpon>FormAdmRemoverUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTelespectador.cs">
       <SubType>Form</SubType>
@@ -105,11 +105,11 @@
     <EmbeddedResource Include="FormAdmAddFilme.resx">
       <DependentUpon>FormAdmAddFilme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormAdmRemoverFilme.resx">
+      <DependentUpon>FormAdmRemoverFilme.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="FormAdmRemoverUsuario.resx">
+      <DependentUpon>FormAdmRemoverUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdministrador.resx">
       <DependentUpon>FormAdministrador.cs</DependentUpon>
