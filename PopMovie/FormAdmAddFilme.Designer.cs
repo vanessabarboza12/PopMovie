@@ -59,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(38, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(320, 51);
@@ -86,7 +86,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.ForeColor = System.Drawing.Color.Red;
             this.label5.Location = new System.Drawing.Point(42, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 25);
@@ -97,25 +97,23 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.ForeColor = System.Drawing.Color.Red;
             this.label4.Location = new System.Drawing.Point(42, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 25);
             this.label4.TabIndex = 10;
             this.label4.Text = "Nome do Filme: ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(42, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 25);
             this.label2.TabIndex = 14;
             this.label2.Text = "Diretor do Filme: ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txbDiretorAdcFilme
             // 
@@ -127,8 +125,9 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.btnAdicionar.Location = new System.Drawing.Point(412, 380);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(273, 59);
@@ -139,8 +138,9 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.btnVoltar.Location = new System.Drawing.Point(121, 380);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(273, 59);
@@ -153,7 +153,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.Location = new System.Drawing.Point(42, 237);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 24);
@@ -185,6 +185,7 @@
             // 
             // numNotaAdcFilme
             // 
+            this.numNotaAdcFilme.DecimalPlaces = 1;
             this.numNotaAdcFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numNotaAdcFilme.Increment = new decimal(new int[] {
             1,
@@ -205,7 +206,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(182, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(109, 24);
@@ -215,14 +216,9 @@
             // numClassificacaoAdcFilme
             // 
             this.numClassificacaoAdcFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numClassificacaoAdcFilme.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
             this.numClassificacaoAdcFilme.Location = new System.Drawing.Point(691, 236);
             this.numClassificacaoAdcFilme.Maximum = new decimal(new int[] {
-            10,
+            18,
             0,
             0,
             0});
@@ -234,7 +230,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.ForeColor = System.Drawing.Color.Red;
             this.label7.Location = new System.Drawing.Point(568, 238);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 24);
@@ -245,7 +241,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(605, 262);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 13);
@@ -265,7 +261,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.ForeColor = System.Drawing.Color.Red;
             this.label9.Location = new System.Drawing.Point(66, 286);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 25);
@@ -276,13 +272,13 @@
             // 
             this.numDuracaoAdcFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numDuracaoAdcFilme.Increment = new decimal(new int[] {
-            1,
+            5,
             0,
             0,
-            65536});
+            0});
             this.numDuracaoAdcFilme.Location = new System.Drawing.Point(470, 235);
             this.numDuracaoAdcFilme.Maximum = new decimal(new int[] {
-            10,
+            400,
             0,
             0,
             0});
@@ -294,7 +290,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.Control;
+            this.label11.ForeColor = System.Drawing.Color.Red;
             this.label11.Location = new System.Drawing.Point(383, 237);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(91, 24);
@@ -305,7 +301,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.Control;
+            this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(409, 261);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 13);
@@ -339,6 +335,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormAdmAddFilme";
             this.Text = "Adicionar Filme";

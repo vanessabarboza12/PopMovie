@@ -22,16 +22,6 @@ namespace PopMovie
             InitializeComponent();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -60,13 +50,13 @@ namespace PopMovie
                 return;
             }
 
-            int anoLancamento = Convert.ToInt32(numAnoAdcFilme);
+            decimal anoLancamento = numAnoAdcFilme.Value;
 
-            double notaImdb = Convert.ToDouble(numNotaAdcFilme);
+            decimal notaImdb = numNotaAdcFilme.Value;
 
-            int classificacao = Convert.ToInt32(numClassificacaoAdcFilme);
+            decimal classificacao = numClassificacaoAdcFilme.Value;
 
-            int duracao = Convert.ToInt32(numDuracaoAdcFilme);
+            decimal duracao = numDuracaoAdcFilme.Value;
 
             string sinopseFilme = txbSinopseAdcFilme.Text.Trim();
             if (sinopseFilme == "")
@@ -77,8 +67,12 @@ namespace PopMovie
          
             try
             {
-                Filme filme = new Filme(nomeFilme, anoLancamento, classificacao, duracao, notaImdb, genero, sinopseFilme, nomeDiretor);
-                admin.adicionarFilme(conexaoBanco, filme);
+                Filme filme = new Filme(nomeFilme, Convert.ToInt32(anoLancamento), Convert.ToInt32(classificacao), Convert.ToInt32(duracao), Convert.ToDouble(notaImdb), genero, sinopseFilme, nomeDiretor);
+                
+                bool filmeAdicionado = admin.adicionarFilme(conexaoBanco, filme);
+                if (filmeAdicionado == true){
+                    this.Close();
+                }
             }
             catch (MySqlException erro)
             {
