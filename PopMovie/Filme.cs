@@ -23,6 +23,7 @@ namespace PopMovie
             this.classificacao = classificacao;
             this.duracao_min = duracao;
             this.notaImdb = nota;
+            this.genero = genero;
             this.sinopse = sinopse;
             this.diretor = diretor;
         }
