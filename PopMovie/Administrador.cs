@@ -25,7 +25,7 @@ namespace PopMovie
         public string getEmail() { return email; }
         public string getSenha() { return senha; }
 
-        public void adicionarFilme (MySqlConnection conexaoBanco, Filme filme)
+        public bool adicionarFilme (MySqlConnection conexaoBanco, Filme filme)
         {
             try
             {
@@ -47,8 +47,8 @@ namespace PopMovie
                 cmdCadastroFilme.Parameters.AddWithValue("diretor", filme.diretor);
                 cmdCadastroFilme.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
                 cmdCadastroFilme.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
-
                 MessageBox.Show("Filme cadastrado com sucesso!");
+                return true;
             }
             finally
             {
