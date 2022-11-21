@@ -1,6 +1,6 @@
 ﻿namespace PopMovie
 {
-    partial class RemoverFilme
+    partial class FormAdmRemoverFilme
     {
         /// <summary>
         /// Required designer variable.
@@ -29,126 +29,76 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txbGeneroRemovFilme = new System.Windows.Forms.TextBox();
-            this.txbNomeRemovFilme = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txbDiretorRemovFilme = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
+            this.dataGridFilmes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFilmes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 44.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(26, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(430, 67);
+            this.label1.Size = new System.Drawing.Size(349, 55);
             this.label1.TabIndex = 2;
             this.label1.Text = "Remover Filme";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txbGeneroRemovFilme
-            // 
-            this.txbGeneroRemovFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbGeneroRemovFilme.Location = new System.Drawing.Point(341, 168);
-            this.txbGeneroRemovFilme.Name = "txbGeneroRemovFilme";
-            this.txbGeneroRemovFilme.Size = new System.Drawing.Size(374, 29);
-            this.txbGeneroRemovFilme.TabIndex = 17;
-            // 
-            // txbNomeRemovFilme
-            // 
-            this.txbNomeRemovFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNomeRemovFilme.Location = new System.Drawing.Point(341, 105);
-            this.txbNomeRemovFilme.Name = "txbNomeRemovFilme";
-            this.txbNomeRemovFilme.Size = new System.Drawing.Size(374, 29);
-            this.txbNomeRemovFilme.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(18, 168);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 31);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Genero do Filme:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(18, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 31);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Nome do Filme: ";
-            // 
-            // txbDiretorRemovFilme
-            // 
-            this.txbDiretorRemovFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDiretorRemovFilme.Location = new System.Drawing.Point(341, 237);
-            this.txbDiretorRemovFilme.Name = "txbDiretorRemovFilme";
-            this.txbDiretorRemovFilme.Size = new System.Drawing.Size(374, 29);
-            this.txbDiretorRemovFilme.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(18, 233);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(221, 31);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Diretor do Filme: ";
             // 
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVoltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.btnVoltar.Location = new System.Drawing.Point(279, 383);
+            this.btnVoltar.Location = new System.Drawing.Point(676, 416);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(273, 59);
+            this.btnVoltar.Size = new System.Drawing.Size(116, 37);
             this.btnVoltar.TabIndex = 21;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnRemover
             // 
             this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
             this.btnRemover.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemover.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.btnRemover.Location = new System.Drawing.Point(279, 306);
+            this.btnRemover.Location = new System.Drawing.Point(296, 389);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(273, 62);
+            this.btnRemover.Size = new System.Drawing.Size(234, 55);
             this.btnRemover.TabIndex = 20;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
-            // RemoverFilme
+            // dataGridFilmes
+            // 
+            this.dataGridFilmes.AllowUserToAddRows = false;
+            this.dataGridFilmes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridFilmes.Location = new System.Drawing.Point(26, 92);
+            this.dataGridFilmes.MultiSelect = false;
+            this.dataGridFilmes.Name = "dataGridFilmes";
+            this.dataGridFilmes.RowHeadersWidth = 50;
+            this.dataGridFilmes.Size = new System.Drawing.Size(746, 266);
+            this.dataGridFilmes.TabIndex = 22;
+            // 
+            // FormAdmRemoverFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(804, 465);
+            this.Controls.Add(this.dataGridFilmes);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnRemover);
-            this.Controls.Add(this.txbDiretorRemovFilme);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbGeneroRemovFilme);
-            this.Controls.Add(this.txbNomeRemovFilme);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Name = "RemoverFilme";
-            this.Text = "RemoverFilme";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Name = "FormAdmRemoverFilme";
+            this.Text = "Remover Filme";
+            this.Load += new System.EventHandler(this.FormAdmRemoverFilme_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFilmes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,13 +107,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txbGeneroRemovFilme;
-        private System.Windows.Forms.TextBox txbNomeRemovFilme;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbDiretorRemovFilme;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnRemover;
+        private System.Windows.Forms.DataGridView dataGridFilmes;
     }
 }

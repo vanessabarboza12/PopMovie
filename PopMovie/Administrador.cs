@@ -30,9 +30,9 @@ namespace PopMovie
             try
             {
                 conexaoBanco.Open(); // abertura de conexão com o banco
-                MySqlCommand cmdCadastroFilme = new MySqlCommand(); // criação de comando e atribuindo nome cmdCadastro
+                MySqlCommand cmdCadastroFilme = new MySqlCommand(); // criação de comando
                 cmdCadastroFilme.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
-                //abaixo é definido o comando sql para o 'cmdCadastro'
+                //abaixo é definido o comando sql para mysqlcommand criado
                 cmdCadastroFilme.CommandText = "INSERT INTO tb_filme (nome, ano_lancamento, classificacao, duracao_min, genero, nota_imdb, sinopse, diretor)" +
                                     "VALUES ( @nome, @ano_lancamento, @classificacao, @duracao_min, @genero, @nota_imdb, @sinopse, @diretor)";
 
@@ -54,8 +54,28 @@ namespace PopMovie
             {
                 if (conexaoBanco != null) conexaoBanco.Close(); //fechamento da coneexão com o banco;
             }
+        }
 
+        public void removerFilme(MySqlConnection conexaoBanco, int idFilme)
+        {
+            try
+            {
+                conexaoBanco.Open(); // abertura de conexão com o banco
+                MySqlCommand cmdRemoveFilme = new MySqlCommand(); // criação de comando
+                cmdRemoveFilme.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
+                //abaixo é definido o comando sql para mysqlcommand criado
+                cmdRemoveFilme.CommandText = "DELETE FROM tb_filme where id = @id";
 
+                //atribuição dos valores para cada parâmetro necessário na consulta sql
+                cmdRemoveFilme.Parameters.AddWithValue("id", idFilme);
+                cmdRemoveFilme.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+                cmdRemoveFilme.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
+                MessageBox.Show("Filme de id "+ idFilme + " removido com sucesso!");
+            }
+            finally
+            {
+                if (conexaoBanco != null) conexaoBanco.Close(); //fechamento da coneexão com o banco;
+            }
         }
 
 
