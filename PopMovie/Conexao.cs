@@ -65,7 +65,7 @@ namespace PopMovie
             }
         }
 
-        public void cadastroUsuario(Telespectador telespectador)
+        public void cadastroTelespectador(Telespectador telespectador)
         {
             try
             {
