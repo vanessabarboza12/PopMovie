@@ -1,6 +1,6 @@
 ﻿namespace PopMovie
 {
-    partial class GerenciarConta
+    partial class FormAdmRemoverUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -133,7 +133,7 @@
             this.btnRemoverConta.Text = "Remover Conta";
             this.btnRemoverConta.UseVisualStyleBackColor = false;
             // 
-            // GerenciarConta
+            // FormAdmRemoverUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,8 +149,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.ForeColor = System.Drawing.Color.Red;
-            this.Name = "GerenciarConta";
-            this.Text = "GerenciarConta";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "FormAdmRemoverUsuario";
+            this.Text = "Remoção de Conta";
             this.ResumeLayout(false);
             this.PerformLayout();
 

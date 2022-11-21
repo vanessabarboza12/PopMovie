@@ -33,7 +33,7 @@
             this.adcFilme_btn = new System.Windows.Forms.Button();
             this.removeFilm_btn = new System.Windows.Forms.Button();
             this.gerencia_btn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAdministrador
@@ -58,6 +58,7 @@
             this.removeFilm_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.removeFilm_btn.Name = "removeFilm_btn";
             this.removeFilm_btn.UseVisualStyleBackColor = false;
+            this.removeFilm_btn.Click += new System.EventHandler(this.removeFilm_btn_Click);
             // 
             // gerencia_btn
             // 
@@ -67,25 +68,26 @@
             this.gerencia_btn.Name = "gerencia_btn";
             this.gerencia_btn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnSair
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnSair.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
+            resources.ApplyResources(this.btnSair, "btnSair");
+            this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btnSair.Name = "btnSair";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // FormAdministrador
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.gerencia_btn);
             this.Controls.Add(this.removeFilm_btn);
             this.Controls.Add(this.adcFilme_btn);
             this.Controls.Add(this.lblAdministrador);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormAdministrador";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -98,6 +100,6 @@
         private System.Windows.Forms.Button adcFilme_btn;
         private System.Windows.Forms.Button removeFilm_btn;
         private System.Windows.Forms.Button gerencia_btn;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSair;
     }
 }

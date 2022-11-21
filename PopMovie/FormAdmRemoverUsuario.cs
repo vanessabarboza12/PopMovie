@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PopMovie
 {
-    public partial class GerenciarConta : Form
+    public partial class FormAdmRemoverUsuario : Form
     {
-        public GerenciarConta()
+        public FormAdmRemoverUsuario()
         {
             InitializeComponent();
         }
