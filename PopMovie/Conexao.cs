@@ -35,7 +35,7 @@ namespace PopMovie
             return sb.ToString();
         }
 
-        public static bool emailJaCadastrado(string email, MySqlConnection conexaoBanco)// //Método utilizado durante o cadastro para verificar se o email já está sendo utilizado por um usuário (seja telespectador ou adm)
+        private bool emailJaCadastrado(string email, MySqlConnection conexaoBanco)// //Método utilizado durante o cadastro para verificar se o email já está sendo utilizado por um usuário (seja telespectador ou adm)
         {
             MySqlCommand cmdValida = new MySqlCommand();
             cmdValida.Connection = conexaoBanco;
