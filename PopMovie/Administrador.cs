@@ -78,6 +78,25 @@ namespace PopMovie
             }
         }
 
-
+        public void removerTelespectador(MySqlConnection conexaoBanco, int idTelespectador)
+        {
+            try
+            {
+                conexaoBanco.Open(); // abertura de conexão com o banco
+                MySqlCommand cmdRemoveTelespectador = new MySqlCommand(); // criação de comando
+                cmdRemoveTelespectador.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
+                //abaixo é definido o comando sql para mysqlcommand criado
+                cmdRemoveTelespectador.CommandText = "DELETE FROM tb_telespectador where id = @id";
+                //atribuição dos valores para cada parâmetro necessário na consulta sql
+                cmdRemoveTelespectador.Parameters.AddWithValue("id", idTelespectador);
+                cmdRemoveTelespectador.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+                cmdRemoveTelespectador.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
+                MessageBox.Show("Telespectador de id " + idTelespectador + " removido com sucesso!");
+            }
+            finally
+            {
+                if (conexaoBanco != null) conexaoBanco.Close(); //fechamento da coneexão com o banco;
+            }
+        }
     }
 }

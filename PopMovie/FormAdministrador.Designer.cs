@@ -32,7 +32,7 @@
             this.lblAdministrador = new System.Windows.Forms.Label();
             this.adcFilme_btn = new System.Windows.Forms.Button();
             this.removeFilm_btn = new System.Windows.Forms.Button();
-            this.gerencia_btn = new System.Windows.Forms.Button();
+            this.gerenciarContas_btn = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -60,13 +60,14 @@
             this.removeFilm_btn.UseVisualStyleBackColor = false;
             this.removeFilm_btn.Click += new System.EventHandler(this.removeFilm_btn_Click);
             // 
-            // gerencia_btn
+            // gerenciarContas_btn
             // 
-            this.gerencia_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
-            resources.ApplyResources(this.gerencia_btn, "gerencia_btn");
-            this.gerencia_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.gerencia_btn.Name = "gerencia_btn";
-            this.gerencia_btn.UseVisualStyleBackColor = false;
+            this.gerenciarContas_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
+            resources.ApplyResources(this.gerenciarContas_btn, "gerenciarContas_btn");
+            this.gerenciarContas_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.gerenciarContas_btn.Name = "gerenciarContas_btn";
+            this.gerenciarContas_btn.UseVisualStyleBackColor = false;
+            this.gerenciarContas_btn.Click += new System.EventHandler(this.gerenciarContas_btn_Click);
             // 
             // btnSair
             // 
@@ -83,7 +84,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.gerencia_btn);
+            this.Controls.Add(this.gerenciarContas_btn);
             this.Controls.Add(this.removeFilm_btn);
             this.Controls.Add(this.adcFilme_btn);
             this.Controls.Add(this.lblAdministrador);
@@ -99,7 +100,7 @@
         private System.Windows.Forms.Label lblAdministrador;
         private System.Windows.Forms.Button adcFilme_btn;
         private System.Windows.Forms.Button removeFilm_btn;
-        private System.Windows.Forms.Button gerencia_btn;
+        private System.Windows.Forms.Button gerenciarContas_btn;
         private System.Windows.Forms.Button btnSair;
     }
 }

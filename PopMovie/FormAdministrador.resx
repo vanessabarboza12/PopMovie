@@ -210,34 +210,34 @@
   <data name="&gt;&gt;removeFilm_btn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="gerencia_btn.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="gerenciarContas_btn.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 20.25pt</value>
   </data>
-  <data name="gerencia_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="gerenciarContas_btn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="gerencia_btn.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="gerenciarContas_btn.Location" type="System.Drawing.Point, System.Drawing">
     <value>268, 333</value>
   </data>
-  <data name="gerencia_btn.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="gerenciarContas_btn.Size" type="System.Drawing.Size, System.Drawing">
     <value>297, 71</value>
   </data>
-  <data name="gerencia_btn.TabIndex" type="System.Int32, mscorlib">
+  <data name="gerenciarContas_btn.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="gerencia_btn.Text" xml:space="preserve">
+  <data name="gerenciarContas_btn.Text" xml:space="preserve">
     <value>Gerenciar Contas</value>
   </data>
-  <data name="&gt;&gt;gerencia_btn.Name" xml:space="preserve">
-    <value>gerencia_btn</value>
+  <data name="&gt;&gt;gerenciarContas_btn.Name" xml:space="preserve">
+    <value>gerenciarContas_btn</value>
   </data>
-  <data name="&gt;&gt;gerencia_btn.Type" xml:space="preserve">
+  <data name="&gt;&gt;gerenciarContas_btn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gerencia_btn.Parent" xml:space="preserve">
+  <data name="&gt;&gt;gerenciarContas_btn.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;gerencia_btn.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;gerenciarContas_btn.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnSair.Font" type="System.Drawing.Font, System.Drawing">
