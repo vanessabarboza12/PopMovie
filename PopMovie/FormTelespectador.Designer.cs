@@ -260,7 +260,7 @@
             this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormTelespectador";
-            this.Text = "Tela Telespectador";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
