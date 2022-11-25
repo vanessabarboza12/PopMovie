@@ -15,9 +15,9 @@ namespace PopMovie
     {
         private MySqlConnection conexaoBanco;
         private Administrador admin;
-        public FormAdmAddFilme(MySqlConnection conexao, Administrador admin)
+        public FormAdmAddFilme(MySqlConnection conexaoBanco, Administrador admin)
         {
-            this.conexaoBanco = conexao;
+            this.conexaoBanco = conexaoBanco;
             this.admin = admin;
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace PopMovie
 {
-    partial class MeusFilmes
+    partial class FormTeleFilmesAvaliados
     {
         /// <summary>
         /// Required designer variable.
@@ -81,7 +81,7 @@
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
             // 
-            // MeusFilmes
+            // FormTeleFilmesAvaliados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,8 +91,9 @@
             this.Controls.Add(this.btnRemoverFilme);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridMeusFilmes);
-            this.Name = "MeusFilmes";
-            this.Text = "MeusFilmes";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "FormTeleFilmesAvaliados";
+            this.Text = "Meus Filmes";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridMeusFilmes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,11 @@ namespace PopMovie
     public partial class FormTelespectador : Form
     {
         private Telespectador telespectador;
-        public FormTelespectador(Telespectador t)
+        private MySqlConnection conexaoBanco;
+        public FormTelespectador(MySqlConnection conexaoBanco, Telespectador telespectador)
         {
-            this.telespectador = t;
+            this.conexaoBanco = conexaoBanco;
+            this.telespectador = telespectador;
             InitializeComponent();
             lblUsuario.Text = "Olá, Telespectador(a) " + telespectador.getNome();
             lblTotalFilmes.Text = telespectador.getTotalFilmes().ToString();
@@ -27,15 +30,19 @@ namespace PopMovie
 
         }
 
-        private void buscar_btn_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnSairConta_Click(object sender, EventArgs e)
         {
             this.Close();
             Application.OpenForms[0].WindowState = FormWindowState.Normal; // Primeira tela (inicial), deixa de estar minimizada e volta ao normal
+        }
+
+        private void btnBuscarFilme_Click(object sender, EventArgs e)
+        {
+            string pesquisaFilme = txbBuscaFilme.Text.Trim();
+            FormTeleBuscarFilme janelaBuscarFilme = new FormTeleBuscarFilme(conexaoBanco, telespectador, pesquisaFilme); 
+            janelaBuscarFilme.ShowDialog();
         }
     }
 }

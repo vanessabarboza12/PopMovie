@@ -64,3 +64,5 @@ C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\PopMovie\obj\Debug\PopMovi
 C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\PopMovie\obj\Debug\PopMovie.pdb
 C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\PopMovie\obj\Debug\PopMovie.FormAdmRemoverFilme.resources
 C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\PopMovie\obj\Debug\PopMovie.FormAdmRemoverUsuario.resources
+C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\PopMovie\obj\Debug\PopMovie.FormTeleFilmesAvaliados.resources
+C:\Users\gabri\Desktop\projetointer\PopMovie\PopMovie\PopMovie\obj\Debug\PopMovie.FormTeleBuscarFilme.resources

@@ -15,9 +15,9 @@ namespace PopMovie
     {
         private MySqlConnection conexaoBanco;
         private Administrador admin;
-        public FormAdmRemoverFilme(MySqlConnection conexao, Administrador admin)
+        public FormAdmRemoverFilme(MySqlConnection conexaoBanco, Administrador admin)
         {
-            this.conexaoBanco = conexao;
+            this.conexaoBanco = conexaoBanco;
             this.admin = admin;
             InitializeComponent();
         }
@@ -29,7 +29,6 @@ namespace PopMovie
 
         private void FormAdmRemoverFilme_Load(object sender, EventArgs e)
         {
-            // IMPORTANTE
             // Ao ser carregado esse forms, é aberto uma conexão com o banco para para pegar todos os filmes do banco e exibir no dataGridFilmes
             conexaoBanco.Open();
             MySqlCommand cmdExibeFilme = new MySqlCommand();

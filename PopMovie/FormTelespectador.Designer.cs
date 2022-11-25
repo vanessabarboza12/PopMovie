@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.busca_usuario = new System.Windows.Forms.TextBox();
-            this.buscar_btn = new System.Windows.Forms.Button();
+            this.txbBuscaFilme = new System.Windows.Forms.TextBox();
+            this.btnBuscarFilme = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMinutosAssistidos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,25 +47,26 @@
             this.lblTotalFilmes = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // busca_usuario
+            // txbBuscaFilme
             // 
-            this.busca_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.busca_usuario.Location = new System.Drawing.Point(17, 115);
-            this.busca_usuario.Name = "busca_usuario";
-            this.busca_usuario.Size = new System.Drawing.Size(569, 29);
-            this.busca_usuario.TabIndex = 1;
+            this.txbBuscaFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbBuscaFilme.Location = new System.Drawing.Point(17, 115);
+            this.txbBuscaFilme.Name = "txbBuscaFilme";
+            this.txbBuscaFilme.Size = new System.Drawing.Size(569, 29);
+            this.txbBuscaFilme.TabIndex = 1;
             // 
-            // buscar_btn
+            // btnBuscarFilme
             // 
-            this.buscar_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
-            this.buscar_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buscar_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.buscar_btn.Location = new System.Drawing.Point(614, 104);
-            this.buscar_btn.Name = "buscar_btn";
-            this.buscar_btn.Size = new System.Drawing.Size(161, 49);
-            this.buscar_btn.TabIndex = 2;
-            this.buscar_btn.Text = "Buscar";
-            this.buscar_btn.UseVisualStyleBackColor = false;
+            this.btnBuscarFilme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
+            this.btnBuscarFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarFilme.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btnBuscarFilme.Location = new System.Drawing.Point(622, 102);
+            this.btnBuscarFilme.Name = "btnBuscarFilme";
+            this.btnBuscarFilme.Size = new System.Drawing.Size(153, 51);
+            this.btnBuscarFilme.TabIndex = 2;
+            this.btnBuscarFilme.Text = "Buscar";
+            this.btnBuscarFilme.UseVisualStyleBackColor = false;
+            this.btnBuscarFilme.Click += new System.EventHandler(this.btnBuscarFilme_Click);
             // 
             // label2
             // 
@@ -255,8 +256,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblMinutosAssistidos);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.buscar_btn);
-            this.Controls.Add(this.busca_usuario);
+            this.Controls.Add(this.btnBuscarFilme);
+            this.Controls.Add(this.txbBuscaFilme);
             this.ForeColor = System.Drawing.Color.Red;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormTelespectador";
@@ -267,8 +268,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox busca_usuario;
-        private System.Windows.Forms.Button buscar_btn;
+        private System.Windows.Forms.TextBox txbBuscaFilme;
+        private System.Windows.Forms.Button btnBuscarFilme;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMinutosAssistidos;
         private System.Windows.Forms.Button button1;

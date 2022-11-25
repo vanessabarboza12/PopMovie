@@ -15,9 +15,9 @@ namespace PopMovie
     {
         private MySqlConnection conexaoBanco;
         private Administrador admin;
-        public FormAdmRemoverUsuario(MySqlConnection conexao, Administrador admin)
+        public FormAdmRemoverUsuario(MySqlConnection conexaoBanco, Administrador admin)
         {
-            this.conexaoBanco = conexao;
+            this.conexaoBanco = conexaoBanco;
             this.admin = admin;
             InitializeComponent();
         }

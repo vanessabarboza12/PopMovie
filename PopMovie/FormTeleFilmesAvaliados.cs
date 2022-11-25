@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PopMovie
 {
-    public partial class Busca : Form
+    public partial class FormTeleFilmesAvaliados : Form
     {
-        public Busca()
+        public FormTeleFilmesAvaliados()
         {
             InitializeComponent();
         }

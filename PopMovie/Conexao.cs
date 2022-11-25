@@ -102,7 +102,7 @@ namespace PopMovie
             }
         }
 
-        public void loginUsuario(string email, string senha)
+        public void loginUsuario(string email, string senha) // Válido para telespectador e admin
         {
             try
             {
@@ -117,10 +117,9 @@ namespace PopMovie
                 if (leitor.Read())
                 {
                     Telespectador telespectador = new Telespectador(leitor.GetString(1), leitor.GetDateTime(2), leitor.GetDateTime(3), leitor.GetString(4), leitor.GetString(5), leitor.GetInt32(6), leitor.GetInt32(7));
-                    FormTelespectador telaTelespectador = new FormTelespectador(telespectador);
-                    Application.OpenForms[1].Close();
+                    FormTelespectador telaTelespectador = new FormTelespectador(conexaoBanco, telespectador);
                     MessageBox.Show("Login realizado com sucesso!");
-                    Application.OpenForms[1].Close(); // Fecha a tela de login após abrir tela de telespectador
+                    Application.OpenForms[1].Close();
                     Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
                     telaTelespectador.Show();
                 }
