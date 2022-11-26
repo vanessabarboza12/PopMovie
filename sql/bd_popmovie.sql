@@ -23,16 +23,13 @@ CREATE TABLE IF NOT EXISTS tb_filme(
     id int PRIMARY KEY AUTO_INCREMENT,
     nome varchar(40) NOT NULL,
     ano_lancamento int NOT NULL,
-    classificacao varchar(3) NOT NULL,
+    classificacao int NOT NULL,
     duracao_min int NOT NULL,
     genero varchar(50) NOT NULL,
     nota_imdb double NOT NULL,
     sinopse varchar(250) NOT NULL,
     diretor varchar(50) NOT NULL
 );
-
-select * from tb_telespectador;
-select * from tb_administrador;
 
 ## COMANDO PARA PEGAR DADOS DE ARQUIVO CSV E INSERIR NO BANCO
 LOAD DATA INFILE 'imdb_movies.csv' ## CAMINHO DE ONDE SE ENCONTRA O ARQUIVO CSV, IDEAL ESPECIFICAR POR COMPLETO, EX: C:/../../../nomeplanilha.csv || OUTRA OPÇÃO É DEIXAR A PLANILHA DENTRO DA PASTA DO BANCO (../mysql/data/bd_popmovie/planilha.csv), PASSANDO A SER NECESSÁRIO SÓ INFORMAR O ARQUIVO DA PLANILHA SEM O CAMINHO NO COMANDO
