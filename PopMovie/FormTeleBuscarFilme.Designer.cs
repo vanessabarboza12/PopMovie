@@ -30,15 +30,19 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.selectNota = new System.Windows.Forms.ComboBox();
-            this.id_Filme = new System.Windows.Forms.TextBox();
             this.idFilme = new System.Windows.Forms.Label();
             this.NotaFilme = new System.Windows.Forms.Label();
             this.btnRemoverFilme = new System.Windows.Forms.Button();
             this.dataGridBuscaFilmes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTermoPesquisa = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txbComentario = new System.Windows.Forms.TextBox();
+            this.numNotaAvaliacao = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxIdFilmes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBuscaFilmes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNotaAvaliacao)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,42 +69,25 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // selectNota
-            // 
-            this.selectNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectNota.FormattingEnabled = true;
-            this.selectNota.Location = new System.Drawing.Point(215, 339);
-            this.selectNota.Name = "selectNota";
-            this.selectNota.Size = new System.Drawing.Size(126, 32);
-            this.selectNota.TabIndex = 31;
-            // 
-            // id_Filme
-            // 
-            this.id_Filme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_Filme.Location = new System.Drawing.Point(215, 290);
-            this.id_Filme.Name = "id_Filme";
-            this.id_Filme.Size = new System.Drawing.Size(126, 29);
-            this.id_Filme.TabIndex = 32;
-            // 
             // idFilme
             // 
             this.idFilme.AutoSize = true;
-            this.idFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idFilme.ForeColor = System.Drawing.Color.Red;
             this.idFilme.Location = new System.Drawing.Point(41, 286);
             this.idFilme.Name = "idFilme";
-            this.idFilme.Size = new System.Drawing.Size(162, 31);
+            this.idFilme.Size = new System.Drawing.Size(129, 25);
             this.idFilme.TabIndex = 35;
             this.idFilme.Text = "Id do Filme: ";
             // 
             // NotaFilme
             // 
             this.NotaFilme.AutoSize = true;
-            this.NotaFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotaFilme.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotaFilme.ForeColor = System.Drawing.Color.Red;
             this.NotaFilme.Location = new System.Drawing.Point(41, 335);
             this.NotaFilme.Name = "NotaFilme";
-            this.NotaFilme.Size = new System.Drawing.Size(80, 31);
+            this.NotaFilme.Size = new System.Drawing.Size(63, 25);
             this.NotaFilme.TabIndex = 36;
             this.NotaFilme.Text = "Nota:";
             // 
@@ -115,6 +102,7 @@
             this.btnRemoverFilme.TabIndex = 37;
             this.btnRemoverFilme.Text = "Adicionar Avaliação";
             this.btnRemoverFilme.UseVisualStyleBackColor = false;
+            this.btnRemoverFilme.Click += new System.EventHandler(this.btnRemoverFilme_Click);
             // 
             // dataGridBuscaFilmes
             // 
@@ -149,20 +137,82 @@
             this.lblTermoPesquisa.TabIndex = 40;
             this.lblTermoPesquisa.Text = "?";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(338, 286);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 25);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Comentário: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(339, 311);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 20);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "(opcional)";
+            // 
+            // txbComentario
+            // 
+            this.txbComentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbComentario.Location = new System.Drawing.Point(467, 284);
+            this.txbComentario.Multiline = true;
+            this.txbComentario.Name = "txbComentario";
+            this.txbComentario.Size = new System.Drawing.Size(294, 88);
+            this.txbComentario.TabIndex = 43;
+            // 
+            // numNotaAvaliacao
+            // 
+            this.numNotaAvaliacao.DecimalPlaces = 1;
+            this.numNotaAvaliacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numNotaAvaliacao.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numNotaAvaliacao.Location = new System.Drawing.Point(176, 335);
+            this.numNotaAvaliacao.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numNotaAvaliacao.Name = "numNotaAvaliacao";
+            this.numNotaAvaliacao.Size = new System.Drawing.Size(105, 29);
+            this.numNotaAvaliacao.TabIndex = 44;
+            // 
+            // comboBoxIdFilmes
+            // 
+            this.comboBoxIdFilmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxIdFilmes.FormattingEnabled = true;
+            this.comboBoxIdFilmes.Location = new System.Drawing.Point(176, 284);
+            this.comboBoxIdFilmes.Name = "comboBoxIdFilmes";
+            this.comboBoxIdFilmes.Size = new System.Drawing.Size(105, 32);
+            this.comboBoxIdFilmes.TabIndex = 45;
+            // 
             // FormTeleBuscarFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(804, 465);
+            this.Controls.Add(this.comboBoxIdFilmes);
+            this.Controls.Add(this.numNotaAvaliacao);
+            this.Controls.Add(this.txbComentario);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTermoPesquisa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridBuscaFilmes);
             this.Controls.Add(this.btnRemoverFilme);
             this.Controls.Add(this.NotaFilme);
             this.Controls.Add(this.idFilme);
-            this.Controls.Add(this.id_Filme);
-            this.Controls.Add(this.selectNota);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -170,6 +220,7 @@
             this.Text = "Busca de filmes";
             this.Load += new System.EventHandler(this.FormTeleBuscarFilme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBuscaFilmes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNotaAvaliacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,13 +229,16 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.ComboBox selectNota;
-        private System.Windows.Forms.TextBox id_Filme;
         private System.Windows.Forms.Label idFilme;
         private System.Windows.Forms.Label NotaFilme;
         private System.Windows.Forms.Button btnRemoverFilme;
         private System.Windows.Forms.DataGridView dataGridBuscaFilmes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTermoPesquisa;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txbComentario;
+        private System.Windows.Forms.NumericUpDown numNotaAvaliacao;
+        private System.Windows.Forms.ComboBox comboBoxIdFilmes;
     }
 }

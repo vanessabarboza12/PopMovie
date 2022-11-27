@@ -1,8 +1,10 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PopMovie
 {
@@ -34,6 +36,44 @@ namespace PopMovie
         public string getSenha() { return senha; }
         public int getTotalFilmes() { return totalFilmes; }
         public int getTotalMinutos() { return totalMinutos; }
+
+        public void adicionarAvaliacao(MySqlConnection conexaoBanco, string emailTelespectador, int idFilme, double nota, string comentario)
+        {
+            try
+            {
+                conexaoBanco.Open(); // abertura de conexão com o banco;
+
+                // Trecho abaixo é para pegar o id do telespectador logado para poder adicionar corretamente na tabela;
+                MySqlCommand cmdPegaIdTelespectador = new MySqlCommand();
+                cmdPegaIdTelespectador.Connection = conexaoBanco;
+                cmdPegaIdTelespectador.CommandText = "SELECT id FROM tb_telespectador where email=@email";
+                cmdPegaIdTelespectador.Parameters.AddWithValue("email", emailTelespectador);
+                MySqlDataReader leitor = cmdPegaIdTelespectador.ExecuteReader();
+                leitor.Read();
+                int idTelespectador = leitor.GetInt32(0);
+                leitor.Close();
+
+
+                MySqlCommand cmdEnvioAvaliacao = new MySqlCommand(); // criação de comando
+                cmdEnvioAvaliacao.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
+                //abaixo é definido o comando sql para mysqlcommand criado
+                cmdEnvioAvaliacao.CommandText = "INSERT INTO tb_avaliacaofilme (id_telespectador, id_filme, nota_pessoal, comentario)" +
+                                    "VALUES (@id_telespectador, @id_filme, @nota, @comentario)";
+
+                //atribuição dos valores para cada parâmetro necessário na consulta sql
+                cmdEnvioAvaliacao.Parameters.AddWithValue("id_telespectador", idTelespectador);
+                cmdEnvioAvaliacao.Parameters.AddWithValue("id_filme", idFilme);
+                cmdEnvioAvaliacao.Parameters.AddWithValue("nota", nota);
+                cmdEnvioAvaliacao.Parameters.AddWithValue("comentario", comentario);
+                cmdEnvioAvaliacao.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+                cmdEnvioAvaliacao.Dispose(); //liberação da memória utilizada pelo comando 'cmdEnvioAvaliacao'
+                MessageBox.Show("Avaliação enviada com sucesso!");
+            }
+            finally
+            {
+                if (conexaoBanco != null) conexaoBanco.Close(); //fechamento da coneexão com o banco;
+            }
+        }
 
     }
 }
