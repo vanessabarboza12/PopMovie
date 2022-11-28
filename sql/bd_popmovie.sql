@@ -37,6 +37,7 @@ CREATE TABLE IF NOT EXISTS tb_avaliacaofilme(
     id_filme int NOT NULL,
     nota_pessoal double NOT NULL,
     comentario varchar(200),
+    data_avaliacao date NOT NULL,
     FOREIGN KEY (id_telespectador) REFERENCES tb_telespectador(id),
     FOREIGN KEY (id_filme) REFERENCES tb_filme(id)
 );
