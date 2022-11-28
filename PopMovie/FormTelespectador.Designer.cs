@@ -132,17 +132,17 @@
             this.filtro1.ForeColor = System.Drawing.Color.Red;
             this.filtro1.Location = new System.Drawing.Point(16, 209);
             this.filtro1.Name = "filtro1";
-            this.filtro1.Size = new System.Drawing.Size(190, 31);
+            this.filtro1.Size = new System.Drawing.Size(90, 31);
             this.filtro1.TabIndex = 11;
-            this.filtro1.Text = "Primeiro Filtro:";
+            this.filtro1.Text = "Filtro: ";
             // 
             // selectFiltro1
             // 
             this.selectFiltro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectFiltro1.FormattingEnabled = true;
-            this.selectFiltro1.Location = new System.Drawing.Point(345, 213);
+            this.selectFiltro1.Location = new System.Drawing.Point(186, 213);
             this.selectFiltro1.Name = "selectFiltro1";
-            this.selectFiltro1.Size = new System.Drawing.Size(241, 32);
+            this.selectFiltro1.Size = new System.Drawing.Size(400, 32);
             this.selectFiltro1.TabIndex = 12;
             // 
             // label6
@@ -152,17 +152,17 @@
             this.label6.ForeColor = System.Drawing.Color.Red;
             this.label6.Location = new System.Drawing.Point(16, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(198, 31);
+            this.label6.Size = new System.Drawing.Size(116, 31);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Segundo Filtro:";
+            this.label6.Text = "Opções:";
             // 
             // selectFiltro2
             // 
             this.selectFiltro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.selectFiltro2.FormattingEnabled = true;
-            this.selectFiltro2.Location = new System.Drawing.Point(345, 256);
+            this.selectFiltro2.Location = new System.Drawing.Point(186, 256);
             this.selectFiltro2.Name = "selectFiltro2";
-            this.selectFiltro2.Size = new System.Drawing.Size(241, 32);
+            this.selectFiltro2.Size = new System.Drawing.Size(400, 32);
             this.selectFiltro2.TabIndex = 14;
             // 
             // checkBox_sim
