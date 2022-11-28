@@ -53,20 +53,20 @@ namespace PopMovie
                 int idTelespectador = leitor.GetInt32(0);
                 leitor.Close();
 
-
                 MySqlCommand cmdEnvioAvaliacao = new MySqlCommand(); // criação de comando
                 cmdEnvioAvaliacao.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
                 //abaixo é definido o comando sql para mysqlcommand criado
-                cmdEnvioAvaliacao.CommandText = "INSERT INTO tb_avaliacaofilme (id_telespectador, id_filme, nota_pessoal, comentario)" +
-                                    "VALUES (@id_telespectador, @id_filme, @nota, @comentario)";
-
+                cmdEnvioAvaliacao.CommandText = "INSERT INTO tb_avaliacaofilme (id_telespectador, id_filme, nota_pessoal, comentario, data_avaliacao)" +
+                                    "VALUES (@id_telespectador, @id_filme, @nota, @comentario, @data)";
                 //atribuição dos valores para cada parâmetro necessário na consulta sql
                 cmdEnvioAvaliacao.Parameters.AddWithValue("id_telespectador", idTelespectador);
                 cmdEnvioAvaliacao.Parameters.AddWithValue("id_filme", idFilme);
                 cmdEnvioAvaliacao.Parameters.AddWithValue("nota", nota);
                 cmdEnvioAvaliacao.Parameters.AddWithValue("comentario", comentario);
+                cmdEnvioAvaliacao.Parameters.AddWithValue("data",  DateTime.Now.Date.ToString("yyyy’-‘MM’-‘dd’"));
                 cmdEnvioAvaliacao.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
                 cmdEnvioAvaliacao.Dispose(); //liberação da memória utilizada pelo comando 'cmdEnvioAvaliacao'
+
                 MessageBox.Show("Avaliação enviada com sucesso!");
             }
             finally

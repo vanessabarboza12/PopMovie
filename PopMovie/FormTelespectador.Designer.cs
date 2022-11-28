@@ -32,7 +32,7 @@
             this.btnBuscarFilme = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMinutosAssistidos = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMeusFilmes = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.filtro1 = new System.Windows.Forms.Label();
@@ -90,18 +90,18 @@
             this.lblMinutosAssistidos.TabIndex = 4;
             this.lblMinutosAssistidos.Text = "Total de minutos assistidos:";
             // 
-            // button1
+            // btnMeusFilmes
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
-            this.button1.Location = new System.Drawing.Point(622, 209);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 121);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Meus Filmes";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnMeusFilmes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(193)))), ((int)(((byte)(89)))));
+            this.btnMeusFilmes.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMeusFilmes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
+            this.btnMeusFilmes.Location = new System.Drawing.Point(622, 209);
+            this.btnMeusFilmes.Name = "btnMeusFilmes";
+            this.btnMeusFilmes.Size = new System.Drawing.Size(153, 121);
+            this.btnMeusFilmes.TabIndex = 7;
+            this.btnMeusFilmes.Text = "Meus Filmes";
+            this.btnMeusFilmes.UseVisualStyleBackColor = false;
+            this.btnMeusFilmes.Click += new System.EventHandler(this.btnMeusFilmes_Click);
             // 
             // label4
             // 
@@ -253,7 +253,7 @@
             this.Controls.Add(this.filtro1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMeusFilmes);
             this.Controls.Add(this.lblMinutosAssistidos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscarFilme);
@@ -262,6 +262,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormTelespectador";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.FormTelespectador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,7 +273,7 @@
         private System.Windows.Forms.Button btnBuscarFilme;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMinutosAssistidos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMeusFilmes;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label filtro1;

@@ -25,11 +25,6 @@ namespace PopMovie
             lblTotalMinutos.Text = telespectador.getTotalMinutos().ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void btnSairConta_Click(object sender, EventArgs e)
@@ -43,6 +38,17 @@ namespace PopMovie
             string pesquisaFilme = txbBuscaFilme.Text.Trim();
             FormTeleBuscarFilme janelaBuscarFilme = new FormTeleBuscarFilme(conexaoBanco, telespectador, pesquisaFilme); 
             janelaBuscarFilme.ShowDialog();
+        }
+
+        private void btnMeusFilmes_Click(object sender, EventArgs e)
+        {
+            FormTeleFilmesAvaliados janelaFilmesAvaliados = new FormTeleFilmesAvaliados(conexaoBanco, telespectador);
+            janelaFilmesAvaliados.ShowDialog();
+        }
+
+        private void FormTelespectador_Load(object sender, EventArgs e)
+        {
+    
         }
     }
 }
