@@ -32,7 +32,6 @@ namespace PopMovie
             DataTable tabelaFilmes = new DataTable();
             tabelaFilmes.Load(leitor);
             dataGridTelespectadores.DataSource = tabelaFilmes;
-            dataGridTelespectadores.DefaultCellStyle.ForeColor = Color.Black;
             if (conexaoBanco != null) conexaoBanco.Close(); // boa prática de fechar banco quando não está mais sendo requisitado
         }
 

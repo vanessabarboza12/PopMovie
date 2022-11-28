@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnRemoverConta = new System.Windows.Forms.Button();
@@ -79,7 +80,10 @@
             this.dataGridTelespectadores.Location = new System.Drawing.Point(29, 99);
             this.dataGridTelespectadores.MultiSelect = false;
             this.dataGridTelespectadores.Name = "dataGridTelespectadores";
+            this.dataGridTelespectadores.ReadOnly = true;
             this.dataGridTelespectadores.RowHeadersWidth = 50;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataGridTelespectadores.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridTelespectadores.Size = new System.Drawing.Size(746, 266);
             this.dataGridTelespectadores.TabIndex = 30;
             // 

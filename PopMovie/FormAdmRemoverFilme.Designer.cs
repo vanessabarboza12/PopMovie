@@ -80,6 +80,7 @@
             this.dataGridFilmes.Location = new System.Drawing.Point(26, 92);
             this.dataGridFilmes.MultiSelect = false;
             this.dataGridFilmes.Name = "dataGridFilmes";
+            this.dataGridFilmes.ReadOnly = true;
             this.dataGridFilmes.RowHeadersWidth = 50;
             this.dataGridFilmes.Size = new System.Drawing.Size(746, 266);
             this.dataGridFilmes.TabIndex = 22;

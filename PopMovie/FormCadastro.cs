@@ -84,7 +84,6 @@ namespace PopMovie
             {
                 Telespectador telespectador = new Telespectador(nome, dataCadastro, dataNascimento, email, senha, totalFilmes, totalMinutos);
                 banco.cadastroTelespectador(telespectador);
-
             }
             catch (MySqlException erro)
             {
