@@ -20,12 +20,13 @@ namespace PopMovie
             this.conexaoBanco = conexaoBanco;
             this.telespectador = telespectador;
             InitializeComponent();
+        }
+        private void FormTelespectador_Load(object sender, EventArgs e)
+        {
             lblUsuario.Text = "Olá, Telespectador(a) " + telespectador.getNome();
             lblTotalFilmes.Text = telespectador.getTotalFilmes().ToString();
             lblTotalMinutos.Text = telespectador.getTotalMinutos().ToString();
         }
-
-
 
         private void btnSairConta_Click(object sender, EventArgs e)
         {
@@ -46,9 +47,22 @@ namespace PopMovie
             janelaFilmesAvaliados.ShowDialog();
         }
 
-        private void FormTelespectador_Load(object sender, EventArgs e)
+        private void pictureRecarregarContadores_Click(object sender, EventArgs e)
         {
-    
+            conexaoBanco.Open();
+            MySqlCommand cmdRecarregaContadores = new MySqlCommand();
+            cmdRecarregaContadores.Connection = conexaoBanco;
+            cmdRecarregaContadores.CommandText = "SELECT total_filmes, total_minutos FROM tb_telespectador where email=@email";
+            cmdRecarregaContadores.Parameters.AddWithValue("email", this.telespectador.getEmail().ToString());
+            MySqlDataReader leitor = cmdRecarregaContadores.ExecuteReader();
+            leitor.Read();
+
+            lblTotalFilmes.Text = leitor.GetInt32(0).ToString();
+            lblTotalMinutos.Text = leitor.GetInt32(1).ToString();
+
+            leitor.Close();
+            cmdRecarregaContadores.Dispose();
+            conexaoBanco.Close();
         }
     }
 }

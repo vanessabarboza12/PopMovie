@@ -67,7 +67,25 @@ namespace PopMovie
                 cmdEnvioAvaliacao.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
                 cmdEnvioAvaliacao.Dispose(); //liberação da memória utilizada pelo comando 'cmdEnvioAvaliacao'
 
-                MessageBox.Show("Avaliação enviada com sucesso!");
+
+                MySqlCommand cmdAtualizacontadores = new MySqlCommand(); // criação de comando
+                cmdAtualizacontadores.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
+                //abaixo é definido o comando sql para mysqlcommand criado
+                cmdAtualizacontadores.CommandText = "UPDATE tb_telespectador " +
+                    "INNER JOIN tb_avaliacaofilme ON tb_telespectador.id = tb_avaliacaofilme.id_telespectador " +
+                    "INNER JOIN tb_filme ON tb_avaliacaofilme.id_filme = tb_filme.id " +
+                    "SET " +
+                    "tb_telespectador.total_minutos = (tb_telespectador.total_minutos + tb_filme.duracao_min), " +
+                    "tb_telespectador.total_filmes = (tb_telespectador.total_filmes + 1) " +
+                    "WHERE tb_telespectador.id = @id_telespectador and tb_filme.id = @id_filme";
+
+                //atribuição dos valores para cada parâmetro necessário na consulta sql
+                cmdAtualizacontadores.Parameters.AddWithValue("id_telespectador", idTelespectador);
+                cmdAtualizacontadores.Parameters.AddWithValue("id_filme", idFilme);
+                cmdAtualizacontadores.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+                cmdAtualizacontadores.Dispose(); //liberação da memória utilizada pelo comando 'cmdAtualizacontadores'
+
+                MessageBox.Show("Avaliação enviada com sucesso! \nAvalie outro filme ou clique em 'Voltar' para sair da tela");
             }
             finally
             {

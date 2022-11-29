@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTelespectador));
             this.txbBuscaFilme = new System.Windows.Forms.TextBox();
             this.btnBuscarFilme = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +46,8 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblTotalMinutos = new System.Windows.Forms.Label();
             this.lblTotalFilmes = new System.Windows.Forms.Label();
+            this.pictureRecarregarContadores = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRecarregarContadores)).BeginInit();
             this.SuspendLayout();
             // 
             // txbBuscaFilme
@@ -235,12 +238,24 @@
             this.lblTotalFilmes.TabIndex = 21;
             this.lblTotalFilmes.Text = "?";
             // 
+            // pictureRecarregarContadores
+            // 
+            this.pictureRecarregarContadores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureRecarregarContadores.BackgroundImage")));
+            this.pictureRecarregarContadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureRecarregarContadores.Location = new System.Drawing.Point(465, 339);
+            this.pictureRecarregarContadores.Name = "pictureRecarregarContadores";
+            this.pictureRecarregarContadores.Size = new System.Drawing.Size(36, 31);
+            this.pictureRecarregarContadores.TabIndex = 22;
+            this.pictureRecarregarContadores.TabStop = false;
+            this.pictureRecarregarContadores.Click += new System.EventHandler(this.pictureRecarregarContadores_Click);
+            // 
             // FormTelespectador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(804, 446);
+            this.Controls.Add(this.pictureRecarregarContadores);
             this.Controls.Add(this.lblTotalFilmes);
             this.Controls.Add(this.lblTotalMinutos);
             this.Controls.Add(this.lblUsuario);
@@ -263,6 +278,7 @@
             this.Name = "FormTelespectador";
             this.Text = " ";
             this.Load += new System.EventHandler(this.FormTelespectador_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureRecarregarContadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,5 +302,6 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblTotalMinutos;
         private System.Windows.Forms.Label lblTotalFilmes;
+        private System.Windows.Forms.PictureBox pictureRecarregarContadores;
     }
 }
