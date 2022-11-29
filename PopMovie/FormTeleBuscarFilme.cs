@@ -71,6 +71,7 @@ namespace PopMovie
             try
             {
                 telespectador.adicionarAvaliacao(conexaoBanco, telespectador.getEmail(), idFilme, nota, comentario);
+                clearTextBox();
             }
             catch (MySqlException erro)
             {
@@ -93,6 +94,12 @@ namespace PopMovie
                 MessageBox.Show(sb.ToString(), "ERRO Desconhecido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void clearTextBox() // redefinir campos após submeter avaliação
+        {
+            numNotaAvaliacao.Value = 0;
+            txbComentario.Clear();
         }
     }
 }
