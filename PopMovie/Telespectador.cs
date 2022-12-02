@@ -65,12 +65,60 @@ namespace PopMovie
                 cmdEnvioAvaliacao.Parameters.AddWithValue("comentario", comentario);
                 cmdEnvioAvaliacao.Parameters.AddWithValue("data",  DateTime.Now.Date.ToString("yyyy’-‘MM’-‘dd’"));
                 cmdEnvioAvaliacao.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+                atualizaContadores(conexaoBanco, "incremento", idTelespectador, idFilme);
+                
                 cmdEnvioAvaliacao.Dispose(); //liberação da memória utilizada pelo comando 'cmdEnvioAvaliacao'
+                MessageBox.Show("Avaliação enviada com sucesso! \nAvalie outro filme ou clique em 'Voltar' para sair da tela");
+            }
+            finally
+            {
+                if (conexaoBanco != null) conexaoBanco.Close(); //fechamento da coneexão com o banco;
+            }
+        }
 
+        public void removerAvaliacao(MySqlConnection conexaoBanco, int idAvaliacao)
+        {
+            try
+            {
+                conexaoBanco.Open(); // abertura de conexão com o banco;
+                // Trecho abaixo é para pegar o id do telespectador e do filme;
+                MySqlCommand cmdPegaIds = new MySqlCommand();
+                cmdPegaIds.Connection = conexaoBanco;
+                cmdPegaIds.CommandText = "SELECT id_telespectador, id_filme FROM tb_avaliacaofilme where id_avaliacao = @idAvaliacao";
+                cmdPegaIds.Parameters.AddWithValue("idAvaliacao", idAvaliacao);
+                MySqlDataReader leitor = cmdPegaIds.ExecuteReader();
+                leitor.Read();
+                int idTelespectador = leitor.GetInt32(0);
+                int idFilme = leitor.GetInt32(1);
+                leitor.Close();
 
-                MySqlCommand cmdAtualizacontadores = new MySqlCommand(); // criação de comando
-                cmdAtualizacontadores.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
+                MySqlCommand cmdRemoveFilme = new MySqlCommand(); // criação de comando
+                cmdRemoveFilme.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
                 //abaixo é definido o comando sql para mysqlcommand criado
+                cmdRemoveFilme.CommandText = "DELETE FROM tb_avaliacaofilme where id_avaliacao = @id";
+                //atribuição dos valores para cada parâmetro necessário na consulta sql
+                cmdRemoveFilme.Parameters.AddWithValue("id", idAvaliacao);
+
+                atualizaContadores(conexaoBanco, "decremento", idTelespectador, idFilme);
+                cmdRemoveFilme.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+                
+                cmdRemoveFilme.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
+                MessageBox.Show("Avaliação de id " + idAvaliacao + " foi removida com sucesso!");
+            }
+            finally
+            {
+                if (conexaoBanco != null) conexaoBanco.Close(); //fechamento da coneexão com o banco;
+            }
+        }
+
+        public void atualizaContadores(MySqlConnection conexaoBanco, string operacao, int idTelespectador, int idFilme)
+        {
+            MySqlCommand cmdAtualizacontadores = new MySqlCommand(); // criação de comando
+            cmdAtualizacontadores.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
+                                                             //abaixo é definido o comando sql para mysqlcommand criado
+
+            if (operacao == "incremento")
+            {
                 cmdAtualizacontadores.CommandText = "UPDATE tb_telespectador " +
                     "INNER JOIN tb_avaliacaofilme ON tb_telespectador.id = tb_avaliacaofilme.id_telespectador " +
                     "INNER JOIN tb_filme ON tb_avaliacaofilme.id_filme = tb_filme.id " +
@@ -78,19 +126,24 @@ namespace PopMovie
                     "tb_telespectador.total_minutos = (tb_telespectador.total_minutos + tb_filme.duracao_min), " +
                     "tb_telespectador.total_filmes = (tb_telespectador.total_filmes + 1) " +
                     "WHERE tb_telespectador.id = @id_telespectador and tb_filme.id = @id_filme";
-
-                //atribuição dos valores para cada parâmetro necessário na consulta sql
-                cmdAtualizacontadores.Parameters.AddWithValue("id_telespectador", idTelespectador);
-                cmdAtualizacontadores.Parameters.AddWithValue("id_filme", idFilme);
-                cmdAtualizacontadores.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
-                cmdAtualizacontadores.Dispose(); //liberação da memória utilizada pelo comando 'cmdAtualizacontadores'
-
-                MessageBox.Show("Avaliação enviada com sucesso! \nAvalie outro filme ou clique em 'Voltar' para sair da tela");
             }
-            finally
+            else
             {
-                if (conexaoBanco != null) conexaoBanco.Close(); //fechamento da coneexão com o banco;
+                cmdAtualizacontadores.CommandText = "UPDATE tb_telespectador " +
+                    "INNER JOIN tb_avaliacaofilme ON tb_telespectador.id = tb_avaliacaofilme.id_telespectador " +
+                    "INNER JOIN tb_filme ON tb_avaliacaofilme.id_filme = tb_filme.id " +
+                    "SET " +
+                    "tb_telespectador.total_minutos = (tb_telespectador.total_minutos - tb_filme.duracao_min), " +
+                    "tb_telespectador.total_filmes = (tb_telespectador.total_filmes - 1) " +
+                    "WHERE tb_telespectador.id = @id_telespectador and tb_filme.id = @id_filme";
             }
+
+            //atribuição dos valores para cada parâmetro necessário na consulta sql
+            cmdAtualizacontadores.Parameters.AddWithValue("id_telespectador", idTelespectador);
+            cmdAtualizacontadores.Parameters.AddWithValue("id_filme", idFilme);
+
+            cmdAtualizacontadores.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+            cmdAtualizacontadores.Dispose(); //liberação da memória utilizada pelo comando 'cmdAtualizacontadores'
         }
 
     }

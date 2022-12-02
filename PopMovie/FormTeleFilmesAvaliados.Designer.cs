@@ -57,6 +57,7 @@
             this.btnRemoverFilme.TabIndex = 25;
             this.btnRemoverFilme.Text = "Remover Filme";
             this.btnRemoverFilme.UseVisualStyleBackColor = false;
+            this.btnRemoverFilme.Click += new System.EventHandler(this.btnRemoverFilme_Click);
             // 
             // btnVoltar
             // 

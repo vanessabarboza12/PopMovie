@@ -242,7 +242,7 @@
             // 
             this.pictureRecarregarContadores.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureRecarregarContadores.BackgroundImage")));
             this.pictureRecarregarContadores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureRecarregarContadores.Location = new System.Drawing.Point(465, 339);
+            this.pictureRecarregarContadores.Location = new System.Drawing.Point(482, 339);
             this.pictureRecarregarContadores.Name = "pictureRecarregarContadores";
             this.pictureRecarregarContadores.Size = new System.Drawing.Size(36, 31);
             this.pictureRecarregarContadores.TabIndex = 22;
