@@ -69,7 +69,7 @@ namespace PopMovie
                 //atribuição dos valores para cada parâmetro necessário na consulta sql
                 cmdRemoveFilme.Parameters.AddWithValue("id", idFilme);
                 cmdRemoveFilme.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
-                cmdRemoveFilme.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
+                cmdRemoveFilme.Dispose(); //liberação dos recursos utilizados pelo comando
                 MessageBox.Show("Filme de id "+ idFilme + " removido com sucesso!");
             }
             finally
@@ -90,7 +90,7 @@ namespace PopMovie
                 //atribuição dos valores para cada parâmetro necessário na consulta sql
                 cmdRemoveTelespectador.Parameters.AddWithValue("id", idTelespectador);
                 cmdRemoveTelespectador.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
-                cmdRemoveTelespectador.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
+                cmdRemoveTelespectador.Dispose(); // //liberação dos recursos utilizados pelo comando
                 MessageBox.Show("Telespectador de id " + idTelespectador + " removido com sucesso!");
             }
             finally

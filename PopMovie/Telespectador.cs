@@ -10,14 +10,18 @@ namespace PopMovie
 {
     public class Telespectador
     {
-        private string nome;
+        private int id;
+        private DateTime dataUltimoAcesso;
         private DateTime dataCadastro;
         private DateTime dataNascimento;
+        private string nome;
         private string email;
         private string senha;
         private int totalFilmes;
         private int totalMinutos;
 
+
+        // Construtor para cadastro
         public Telespectador(string nome, DateTime dataCadastro, DateTime dataNascimento, string email, string senha, int totalFilmes, int totalMinutos)
         {
             this.nome = nome;
@@ -29,29 +33,37 @@ namespace PopMovie
             this.totalMinutos = totalMinutos;
         }
 
-        public string getNome() { return nome; }
-        public string getEmail() { return email; }
+        // Construtor para login
+        public Telespectador(int id, string nome, DateTime dataUltimoAcesso, DateTime dataCadastro, DateTime dataNascimento, string email, string senha, int totalFilmes, int totalMinutos)
+        {
+            this.id = id;
+            this.nome = nome;
+            this.dataUltimoAcesso = dataUltimoAcesso;
+            this.dataCadastro = dataCadastro;
+            this.dataNascimento = dataNascimento;
+            this.email = email;
+            this.senha = senha;
+            this.totalFilmes = totalFilmes;
+            this.totalMinutos = totalMinutos;
+        }
+
+        public int getId() { return id; }
+        public DateTime getDataUltimoAcesso() { return dataCadastro; }
         public DateTime getDataCadastro() { return dataCadastro; }
         public DateTime getDataNascimento() { return dataNascimento; }
+        public string getNome() { return nome; }
+        public string getEmail() { return email; }
         public string getSenha() { return senha; }
         public int getTotalFilmes() { return totalFilmes; }
         public int getTotalMinutos() { return totalMinutos; }
 
-        public void adicionarAvaliacao(MySqlConnection conexaoBanco, string emailTelespectador, int idFilme, double nota, string comentario)
+
+
+        public void adicionarAvaliacao(MySqlConnection conexaoBanco, int idTelespectador, int idFilme, double nota, string comentario)
         {
             try
             {
                 conexaoBanco.Open(); // abertura de conexão com o banco;
-
-                // Trecho abaixo é para pegar o id do telespectador logado para poder adicionar corretamente na tabela;
-                MySqlCommand cmdPegaIdTelespectador = new MySqlCommand();
-                cmdPegaIdTelespectador.Connection = conexaoBanco;
-                cmdPegaIdTelespectador.CommandText = "SELECT id FROM tb_telespectador where email=@email";
-                cmdPegaIdTelespectador.Parameters.AddWithValue("email", emailTelespectador);
-                MySqlDataReader leitor = cmdPegaIdTelespectador.ExecuteReader();
-                leitor.Read();
-                int idTelespectador = leitor.GetInt32(0);
-                leitor.Close();
 
                 MySqlCommand cmdEnvioAvaliacao = new MySqlCommand(); // criação de comando
                 cmdEnvioAvaliacao.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
@@ -81,6 +93,7 @@ namespace PopMovie
             try
             {
                 conexaoBanco.Open(); // abertura de conexão com o banco;
+
                 // Trecho abaixo é para pegar o id do telespectador e do filme;
                 MySqlCommand cmdPegaIds = new MySqlCommand();
                 cmdPegaIds.Connection = conexaoBanco;

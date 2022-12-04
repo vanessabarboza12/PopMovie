@@ -16,10 +16,15 @@ namespace PopMovie
         private Conexao banco;
         public FormLogin(Conexao banco)
         {
-            InitializeComponent();
             this.banco = banco;
+            InitializeComponent();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
             txbSenha.PasswordChar = '*';
         }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string email = txbEmail.Text.Trim();
@@ -69,19 +74,10 @@ namespace PopMovie
                 MessageBox.Show(sb.ToString(), "ERRO Desconhecido!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

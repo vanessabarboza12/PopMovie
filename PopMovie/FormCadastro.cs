@@ -16,12 +16,16 @@ namespace PopMovie
         private Conexao banco;
         public FormCadastro(Conexao banco)
         {
-            InitializeComponent();
             this.banco = banco;
+            InitializeComponent();
+            
+        }
+
+        private void FormCadastro_Load(object sender, EventArgs e)
+        {
             txbSenha.PasswordChar = '*';
             txbConfirmaSenha.PasswordChar = '*';
         }
-
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             string nome = txbNome.Text.Trim();
@@ -112,9 +116,5 @@ namespace PopMovie
             this.Close();
         }
 
-        private void FormCadastro_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -22,11 +22,6 @@ namespace PopMovie
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormAdmRemoverFilme_Load(object sender, EventArgs e)
         {
             // Ao ser carregado esse forms, é aberto uma conexão com o banco para para pegar todos os filmes do banco e exibir no dataGridFilmes

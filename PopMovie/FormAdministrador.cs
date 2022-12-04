@@ -23,7 +23,6 @@ namespace PopMovie
             lblAdministrador.Text = "Olá, administrador(a) " + admin.getNome();
         }
 
-
         private void adcFilme_btn_Click(object sender, EventArgs e)
         {
             FormAdmAddFilme janelaAddFilme = new FormAdmAddFilme(conexaoBanco, admin);
@@ -35,6 +34,7 @@ namespace PopMovie
             FormAdmRemoverFilme janelaRemoverFilme = new FormAdmRemoverFilme(conexaoBanco, admin);
             janelaRemoverFilme.ShowDialog();
         }
+
         private void gerenciarContas_btn_Click(object sender, EventArgs e)
         {
             FormAdmRemoverUsuario janelaRemoverConta = new FormAdmRemoverUsuario(conexaoBanco, admin);
@@ -48,6 +48,5 @@ namespace PopMovie
                 Application.OpenForms[0].WindowState = FormWindowState.Normal; // Primeira tela (inicial), deixa de estar minimizada e volta ao normal
             }
         }
-
     }
 }
