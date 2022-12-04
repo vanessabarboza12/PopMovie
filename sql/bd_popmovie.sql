@@ -6,11 +6,13 @@ CREATE TABLE IF NOT EXISTS tb_telespectador(
     nome varchar(40) NOT NULL,
     data_cadastro date NOT NULL,
     data_nascimento date NOT NULL,
+    data_ultimo_acesso date NOT NULL,
     email varchar(60) NOT NULL,
     senha varchar(65) NOT NULL,
     total_filmes int NOT NULL,
     total_minutos int NOT NULL
 );
+CREATE UNIQUE INDEX uidx_temail ON tb_telespectador(email);
 
 CREATE TABLE IF NOT EXISTS tb_administrador(
     id int PRIMARY KEY AUTO_INCREMENT,
@@ -18,6 +20,7 @@ CREATE TABLE IF NOT EXISTS tb_administrador(
     email varchar(60) NOT NULL,
     senha varchar(65) NOT NULL
 );
+CREATE UNIQUE INDEX uidx_aemail ON tb_administrador(email);
 
 CREATE TABLE IF NOT EXISTS tb_filme(
     id int PRIMARY KEY AUTO_INCREMENT,
@@ -30,6 +33,7 @@ CREATE TABLE IF NOT EXISTS tb_filme(
     sinopse varchar(250) NOT NULL,
     diretor varchar(50) NOT NULL
 );
+
 
 CREATE TABLE IF NOT EXISTS tb_avaliacaofilme(
     id_avaliacao int PRIMARY KEY AUTO_INCREMENT,
