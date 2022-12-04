@@ -18,7 +18,7 @@ namespace PopMovie
 
         public Conexao()
         {
-            dadosConexao = @"server=sql10.freesqldatabase.com;uid=sql10580814;pwd=Pk2GC1wsn9;database=sql10580814;ConnectionTimeout=1";////banco local -> dadosConexao = @"server=127.0.0.1;uid=root;pwd= {vazio ou ifspifsp talvez};database=bd_popmovie;ConnectionTimeout=1";
+            dadosConexao = @"server=sql10.freesqldatabase.com;uid=sql10582433;pwd=G3H3ftrd6H;database=sql10582433;ConnectionTimeout=1; Convert Zero Datetime=True";////banco local -> dadosConexao = @"server=127.0.0.1;uid=root;pwd= {vazio ou ifspifsp talvez};database=bd_popmovie;ConnectionTimeout=1";
             conexaoBanco = new MySqlConnection(dadosConexao);
         }
 
@@ -82,7 +82,7 @@ namespace PopMovie
                     cmdCadastro.CommandText = "INSERT INTO tb_telespectador (nome, data_cadastro, data_nascimento, email, senha, total_filmes, total_minutos)" +
                                         "VALUES ( @nome, @dataCadastro, @dataNascimento, @email, @senha, @total_filmes, @total_minutos)";
 
-                    //atribuição dos valores para cada parâmetro necessário na consulta sql
+                    //atribuição dos valores para cada parâmetro necessário no comando sql
                     cmdCadastro.Parameters.AddWithValue("nome", telespectador.getNome());
                     cmdCadastro.Parameters.AddWithValue("dataCadastro", telespectador.getDataCadastro());
                     cmdCadastro.Parameters.AddWithValue("dataNascimento", telespectador.getDataNascimento());
@@ -116,12 +116,29 @@ namespace PopMovie
 
                 if (leitor.Read())
                 {
-                    Telespectador telespectador = new Telespectador(leitor.GetString(1), leitor.GetDateTime(2), leitor.GetDateTime(3), leitor.GetString(4), leitor.GetString(5), leitor.GetInt32(6), leitor.GetInt32(7));
+                    DateTime ultimoAcesso = DateTime.Now.Date;
+                    ultimoAcesso.ToString("yyyy’-‘MM’-‘dd’");
+                    Telespectador telespectador = new Telespectador(leitor.GetInt32(0), leitor.GetString(1), ultimoAcesso, leitor.GetDateTime(3), leitor.GetDateTime(4), leitor.GetString(5), leitor.GetString(6), leitor.GetInt32(7), leitor.GetInt32(8));
+                    int id = leitor.GetInt32(0);
+
+                    leitor.Close();
+                    MySqlCommand cmdAtualizaUltimoAcesso = new MySqlCommand(); // criação de comando e atribuindo nome cmdCadastro
+                    cmdAtualizaUltimoAcesso.Connection = conexaoBanco; // atribui uma conexão para o comando (obrigatório)
+                                                                       //abaixo é definido o comando sql para o 'cmdCadastro'
+                    cmdAtualizaUltimoAcesso.CommandText = "UPDATE tb_telespectador SET data_ultimo_acesso = @ultimoAcesso where id = @id;";
+
+                    //atribuição dos valores para cada parâmetro necessário no comando sql
+                    cmdAtualizaUltimoAcesso.Parameters.AddWithValue("id", id); 
+                    cmdAtualizaUltimoAcesso.Parameters.AddWithValue("ultimoacesso", ultimoAcesso);
+                    cmdAtualizaUltimoAcesso.ExecuteNonQuery(); //executa o comando sql (lembrando que 'ExecuteNonQuery' não retorna valores)
+                    cmdAtualizaUltimoAcesso.Dispose(); //liberação da memória utilizada pelo 'cmdCadastro'
+
                     FormTelespectador telaTelespectador = new FormTelespectador(conexaoBanco, telespectador);
                     MessageBox.Show("Login realizado com sucesso!");
-                    Application.OpenForms[1].Close();
+                    Application.OpenForms[1].Close(); // fecha a tela de login
                     Application.OpenForms[0].WindowState = FormWindowState.Minimized; // minimiza tela inicial (primeira tela)
                     telaTelespectador.Show();
+
                 }
                 else
                 {   
@@ -132,7 +149,6 @@ namespace PopMovie
 
                     if (leitor.Read())
                     {
-                      
                         Administrador administrador = new Administrador(leitor.GetString(1), leitor.GetString(2), leitor.GetString(3));
                         FormAdministrador telaAdministrador = new FormAdministrador(conexaoBanco, administrador);
                         MessageBox.Show("Login realizado com sucesso!");
