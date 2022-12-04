@@ -37,16 +37,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.filtro1 = new System.Windows.Forms.Label();
-            this.selectFiltro1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxFiltro = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.selectFiltro2 = new System.Windows.Forms.ComboBox();
-            this.checkBox_sim = new System.Windows.Forms.CheckBox();
-            this.checkBox_nao = new System.Windows.Forms.CheckBox();
+            this.comboBoxValor = new System.Windows.Forms.ComboBox();
             this.btnSairConta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblTotalMinutos = new System.Windows.Forms.Label();
             this.lblTotalFilmes = new System.Windows.Forms.Label();
             this.pictureRecarregarContadores = new System.Windows.Forms.PictureBox();
+            this.rBtnSim = new System.Windows.Forms.RadioButton();
+            this.rBtnNao = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureRecarregarContadores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,14 +139,16 @@
             this.filtro1.TabIndex = 11;
             this.filtro1.Text = "Filtro: ";
             // 
-            // selectFiltro1
+            // comboBoxFiltro
             // 
-            this.selectFiltro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectFiltro1.FormattingEnabled = true;
-            this.selectFiltro1.Location = new System.Drawing.Point(186, 213);
-            this.selectFiltro1.Name = "selectFiltro1";
-            this.selectFiltro1.Size = new System.Drawing.Size(400, 32);
-            this.selectFiltro1.TabIndex = 12;
+            this.comboBoxFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFiltro.FormattingEnabled = true;
+            this.comboBoxFiltro.Location = new System.Drawing.Point(186, 213);
+            this.comboBoxFiltro.Name = "comboBoxFiltro";
+            this.comboBoxFiltro.Size = new System.Drawing.Size(400, 32);
+            this.comboBoxFiltro.TabIndex = 12;
+            this.comboBoxFiltro.SelectedIndexChanged += new System.EventHandler(this.comboBoxFiltro_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -159,38 +161,15 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Opções:";
             // 
-            // selectFiltro2
+            // comboBoxValor
             // 
-            this.selectFiltro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectFiltro2.FormattingEnabled = true;
-            this.selectFiltro2.Location = new System.Drawing.Point(186, 256);
-            this.selectFiltro2.Name = "selectFiltro2";
-            this.selectFiltro2.Size = new System.Drawing.Size(400, 32);
-            this.selectFiltro2.TabIndex = 14;
-            // 
-            // checkBox_sim
-            // 
-            this.checkBox_sim.AutoSize = true;
-            this.checkBox_sim.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_sim.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBox_sim.Location = new System.Drawing.Point(345, 163);
-            this.checkBox_sim.Name = "checkBox_sim";
-            this.checkBox_sim.Size = new System.Drawing.Size(79, 35);
-            this.checkBox_sim.TabIndex = 15;
-            this.checkBox_sim.Text = "Sim";
-            this.checkBox_sim.UseVisualStyleBackColor = true;
-            // 
-            // checkBox_nao
-            // 
-            this.checkBox_nao.AutoSize = true;
-            this.checkBox_nao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_nao.ForeColor = System.Drawing.SystemColors.Window;
-            this.checkBox_nao.Location = new System.Drawing.Point(506, 163);
-            this.checkBox_nao.Name = "checkBox_nao";
-            this.checkBox_nao.Size = new System.Drawing.Size(83, 35);
-            this.checkBox_nao.TabIndex = 16;
-            this.checkBox_nao.Text = "Não";
-            this.checkBox_nao.UseVisualStyleBackColor = true;
+            this.comboBoxValor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxValor.FormattingEnabled = true;
+            this.comboBoxValor.Location = new System.Drawing.Point(186, 256);
+            this.comboBoxValor.Name = "comboBoxValor";
+            this.comboBoxValor.Size = new System.Drawing.Size(400, 32);
+            this.comboBoxValor.TabIndex = 14;
             // 
             // btnSairConta
             // 
@@ -249,22 +228,50 @@
             this.pictureRecarregarContadores.TabStop = false;
             this.pictureRecarregarContadores.Click += new System.EventHandler(this.pictureRecarregarContadores_Click);
             // 
+            // rBtnSim
+            // 
+            this.rBtnSim.AutoSize = true;
+            this.rBtnSim.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnSim.ForeColor = System.Drawing.Color.White;
+            this.rBtnSim.Location = new System.Drawing.Point(330, 163);
+            this.rBtnSim.Name = "rBtnSim";
+            this.rBtnSim.Size = new System.Drawing.Size(78, 35);
+            this.rBtnSim.TabIndex = 23;
+            this.rBtnSim.TabStop = true;
+            this.rBtnSim.Text = "Sim";
+            this.rBtnSim.UseVisualStyleBackColor = true;
+            this.rBtnSim.CheckedChanged += new System.EventHandler(this.rBtnSim_CheckedChanged);
+            // 
+            // rBtnNao
+            // 
+            this.rBtnNao.AutoSize = true;
+            this.rBtnNao.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rBtnNao.ForeColor = System.Drawing.Color.White;
+            this.rBtnNao.Location = new System.Drawing.Point(457, 163);
+            this.rBtnNao.Name = "rBtnNao";
+            this.rBtnNao.Size = new System.Drawing.Size(82, 35);
+            this.rBtnNao.TabIndex = 24;
+            this.rBtnNao.TabStop = true;
+            this.rBtnNao.Text = "Não";
+            this.rBtnNao.UseVisualStyleBackColor = true;
+            this.rBtnNao.CheckedChanged += new System.EventHandler(this.rBtnNao_CheckedChanged);
+            // 
             // FormTelespectador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(29)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(804, 446);
+            this.Controls.Add(this.rBtnNao);
+            this.Controls.Add(this.rBtnSim);
             this.Controls.Add(this.pictureRecarregarContadores);
             this.Controls.Add(this.lblTotalFilmes);
             this.Controls.Add(this.lblTotalMinutos);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnSairConta);
-            this.Controls.Add(this.checkBox_nao);
-            this.Controls.Add(this.checkBox_sim);
-            this.Controls.Add(this.selectFiltro2);
+            this.Controls.Add(this.comboBoxValor);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.selectFiltro1);
+            this.Controls.Add(this.comboBoxFiltro);
             this.Controls.Add(this.filtro1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -293,15 +300,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label filtro1;
-        private System.Windows.Forms.ComboBox selectFiltro1;
+        private System.Windows.Forms.ComboBox comboBoxFiltro;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox selectFiltro2;
-        private System.Windows.Forms.CheckBox checkBox_sim;
-        private System.Windows.Forms.CheckBox checkBox_nao;
+        private System.Windows.Forms.ComboBox comboBoxValor;
         private System.Windows.Forms.Button btnSairConta;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label lblTotalMinutos;
         private System.Windows.Forms.Label lblTotalFilmes;
         private System.Windows.Forms.PictureBox pictureRecarregarContadores;
+        private System.Windows.Forms.RadioButton rBtnSim;
+        private System.Windows.Forms.RadioButton rBtnNao;
     }
 }
