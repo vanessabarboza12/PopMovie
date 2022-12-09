@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS tb_avaliacaofilme(
     nota_pessoal double NOT NULL,
     comentario varchar(200),
     data_avaliacao date NOT NULL,
-    FOREIGN KEY (id_telespectador) REFERENCES tb_telespectador(id),
-    FOREIGN KEY (id_filme) REFERENCES tb_filme(id)
+    FOREIGN KEY (id_telespectador) REFERENCES tb_telespectador(id) ON DELETE CASCADE,
+    FOREIGN KEY (id_filme) REFERENCES tb_filme(id) ON DELETE CASCADE
 );
 
 ## COMANDO PARA PEGAR DADOS DE ARQUIVO CSV E INSERIR NO BANCO
